@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="ISM2411_6WK_W03_QUIZ" title="ISM2411 6-Week Week 3 Quiz — Data Structures, Files & GitHub">
+    <qtimetadata>
+      <qtimetadatafield><fieldlabel>cc_maxattempts</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+    </qtimetadata>
+    <section ident="ISM2411_6WK_W03_SEC" title="Week 3 — Data Structures, Files & GitHub">
+
+      <item ident="W03_Q01" title="Q01 — list operations">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;inventory = ["apples","bananas"]&lt;br&gt;inventory.append("oranges")&lt;br&gt;inventory.remove("bananas")&lt;br&gt;print(inventory)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q01_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">["apples","bananas","oranges"]</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">["apples","oranges"]</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">["bananas","oranges"]</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q01_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q01_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q01_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q01_FB_C"><material><mattext texttype="text/html">✓ Correct! Start: ["apples","bananas"]. append("oranges") → ["apples","bananas","oranges"]. remove("bananas") → ["apples","oranges"]. Verbatim Q1.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q01_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Start: ["apples","bananas"]. append("oranges") → ["apples","bananas","oranges"]. remove("bananas") → ["apples","oranges"]. Verbatim Q1.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q02" title="Q02 — dict access">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;customer = {"name": "Alice", "age": 30}&lt;br&gt;print(customer["name"])&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q02_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Alice</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">name</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">{"name":"Alice"}</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q02_RL">A</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q02_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q02_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q02_FB_C"><material><mattext texttype="text/html">✓ Correct! customer["name"] accesses the value for key "name" → "Alice". Verbatim Q2 (Week 11).</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q02_FB_W"><material><mattext texttype="text/html">✗ Incorrect. customer["name"] accesses the value for key "name" → "Alice". Verbatim Q2 (Week 11).</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q03" title="Q03 — csv module">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which Python module reads and writes CSV files without installing anything?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q03_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">file</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">csv</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">pandas</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">io</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q03_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q03_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q03_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q03_FB_C"><material><mattext texttype="text/html">✓ Correct! The csv module is built into Python — no installation needed. pandas is a third-party library. Verbatim Q3 (Week 12).</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q03_FB_W"><material><mattext texttype="text/html">✗ Incorrect. The csv module is built into Python — no installation needed. pandas is a third-party library. Verbatim Q3 (Week 12).</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q04" title="Q04 — tuple immutability">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the key difference between a list and a tuple?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q04_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Tuples hold more items</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Lists use {}; tuples use []</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Tuples are immutable; lists are mutable</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Lists hold only strings</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q04_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q04_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q04_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q04_FB_C"><material><mattext texttype="text/html">✓ Correct! Tuples are immutable — once created, they cannot be modified. Lists are mutable — you can add, remove, or change items. Verbatim Q4.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q04_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Tuples are immutable — once created, they cannot be modified. Lists are mutable — you can add, remove, or change items. Verbatim Q4.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q05" title="Q05 — relative paths">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Why use relative file paths (data/sales.csv) instead of absolute paths (/Users/john/Desktop/data/sales.csv)?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q05_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Shorter to type</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Work on any machine regardless of where the project is stored</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Run faster</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Required by the csv module</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q05_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q05_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q05_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q05_FB_C"><material><mattext texttype="text/html">✓ Correct! Relative paths work on any machine. Absolute paths break when the project moves to a different computer or when another person clones the repo. Verbatim Q5.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q05_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Relative paths work on any machine. Absolute paths break when the project moves to a different computer or when another person clones the repo. Verbatim Q5.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q06" title="Q06 — dict .get()">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;customer = {"name": "Alice", "age": 30}&lt;br&gt;print(customer.get("email", "Not found"))&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q06_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">None</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">"Not found"</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">"email"</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q06_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q06_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q06_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q06_FB_C"><material><mattext texttype="text/html">✓ Correct! .get(key, default) returns the value if the key exists, or the default if it does not. "email" is not in the dict → returns "Not found". Verbatim Q6.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q06_FB_W"><material><mattext texttype="text/html">✗ Incorrect. .get(key, default) returns the value if the key exists, or the default if it does not. "email" is not in the dict → returns "Not found". Verbatim Q6.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q07" title="Q07 — dict iteration">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;inventory = {"apples": 10, "bananas": 5}&lt;br&gt;for item in inventory:&lt;br&gt;    print(item)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q07_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">10 5</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">apples bananas</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">{"apples":10}</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q07_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q07_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q07_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q07_FB_C"><material><mattext texttype="text/html">✓ Correct! Iterating a dict returns its KEYS, not values. To get values: for v in inventory.values(). To get both: for k,v in inventory.items(). Verbatim Q7.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q07_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Iterating a dict returns its KEYS, not values. To get values: for v in inventory.values(). To get both: for k,v in inventory.items(). Verbatim Q7.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q08" title="Q08 — list len">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;coords = (40.7128, -74.0060)&lt;br&gt;print(len(coords))&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q08_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">1</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">3</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">2</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q08_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q08_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q08_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q08_FB_C"><material><mattext texttype="text/html">✓ Correct! The tuple has 2 elements: 40.7128 and -74.0060. len() returns 2. Verbatim Q8.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q08_FB_W"><material><mattext texttype="text/html">✗ Incorrect. The tuple has 2 elements: 40.7128 and -74.0060. len() returns 2. Verbatim Q8.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q09" title="Q09 — dict method">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which dict method returns all key-value pairs as tuples?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q09_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">.keys()</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">.values()</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">.items()</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">.pairs()</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q09_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q09_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q09_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q09_FB_C"><material><mattext texttype="text/html">✓ Correct! .items() returns a view of (key, value) tuples — used in for k,v in d.items() loops. .pairs() does not exist. Verbatim Q9.</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q09_FB_W"><material><mattext texttype="text/html">✗ Incorrect. .items() returns a view of (key, value) tuples — used in for k,v in d.items() loops. .pairs() does not exist. Verbatim Q9.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W03_Q10" title="Q10 — csv DictReader">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;When using csv.DictReader to read a CSV, what type is each row?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W03_Q10_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">A list</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">A tuple</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">A dict</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">A string</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W03_Q10_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q10_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W03_Q10_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W03_Q10_FB_C"><material><mattext texttype="text/html">✓ Correct! DictReader reads each row as a dict where keys are the header column names. This is why you write row["price"] instead of row[2].</mattext></material></itemfeedback>
+        <itemfeedback ident="W03_Q10_FB_W"><material><mattext texttype="text/html">✗ Incorrect. DictReader reads each row as a dict where keys are the header column names. This is why you write row["price"] instead of row[2].</mattext></material></itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISM2411 6-Week · Week 1 · Python Foundations</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020c14;--card:#07192b;--bord:#0d2d4a;--text:#e8f4ff;--dim:#2a5a7a;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --v:#22d3ee;--s:#34d399;--i:#818cf8;--b:#fbbf24;--f:#f472b6;--out:#cffafe;
+}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-0.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}
+.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-0.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--v);background:rgba(34,211,238,.1);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--v);}.reveal .controls{color:var(--v);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;}
+.t-v{background:rgba(34,211,238,.15);color:var(--v);border:1px solid rgba(34,211,238,.3);}
+.t-s{background:rgba(52,211,153,.15);color:var(--s);border:1px solid rgba(52,211,153,.3);}
+.t-i{background:rgba(129,140,248,.15);color:var(--i);border:1px solid rgba(129,140,248,.3);}
+.t-b{background:rgba(251,191,36,.15);color:var(--b);border:1px solid rgba(251,191,36,.3);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-v{border-left:3px solid var(--v);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid #f87171;}
+.py{background:#010a12;border:1px solid rgba(34,211,238,.12);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.67em;line-height:1.85;margin:10px 0;}
+.py .kw{color:var(--i);}.py .kw2{color:var(--s);}.py .s{color:#fda4af;}.py .n{color:#60a5fa;}
+.py .v{color:var(--v);}.py .cm{color:#0d2438;font-style:italic;}.py .ok{color:var(--out);}.py .err{color:#f87171;}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-v{background:rgba(34,211,238,.08);border-left:3px solid var(--v);}.box-v .bb strong{color:var(--v);}
+.box-s{background:rgba(52,211,153,.08);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(251,191,36,.08);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid #f87171;}.box-w .bb strong{color:#f87171;}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated · 6-Week · Week 1 of 6</span>
+  <h1>Python Foundations</h1>
+  <h3>Variables, data types, operators, expressions, and f-strings — the building blocks of every program.</h3>
+  <div style="margin-top:1.3em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag t-v">Variables &amp; Types</span>
+    <span class="tag t-s">Operators</span>
+    <span class="tag t-i">f-strings</span>
+    <span class="tag t-b">Business Formulas</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">⚡</span>
+    <div class="bb"><strong>Accelerated Format</strong>This 6-week course covers the same content as the 16-week version — condensed. Week 1 = Weeks 2–5 of the standard course. DataCamp #1 (Python Data Fundamentals) begins today and is due end of Week 2. Budget 8–10 hours this week for class + DataCamp + assignment.</div>
+  </div>
+  <span class="sn">1 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Why Python?</span>
+  <h2>From Spreadsheets to Code</h2>
+  <h3>Excel handles hundreds of rows manually. Python handles millions automatically.</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-w" style="margin-bottom:10px">
+        <span class="bi">📊</span>
+        <div class="bb"><strong>Excel Limitations</strong>Manual, repetitive, can't be version-controlled, falls apart at scale. Every new month = starting over.</div>
+      </div>
+      <div class="py">
+<span class="cm"># Excel: 12 clicks every month</span>
+<span class="cm"># Next month: 12 more clicks</span>
+<span class="cm"># Python: write once, run forever</span>
+      </div>
+    </div>
+    <div>
+      <div class="box box-v" style="margin-bottom:10px">
+        <span class="bi">✅</span>
+        <div class="bb"><strong>Python Advantages</strong>Automated, reproducible, scalable, version-controlled. The same code that works on 100 rows works on 1,000,000 rows without modification.</div>
+      </div>
+      <div class="py">
+<span class="cm"># Python: revenue for 10,000 products</span>
+<span class="v">revenue</span> = <span class="v">price</span> * <span class="v">quantity</span>
+<span class="cm"># One line. Every product. Every time.</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">2 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 1 · Variables</span>
+  <h2>Variables — Labeled Containers</h2>
+  <h3>A variable is a name that points to a value stored in memory</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Assignment: name = value</span>
+<span class="v">product_name</span> = <span class="s">"Widget Pro"</span>
+<span class="v">price</span>        = <span class="n">49.99</span>
+<span class="v">quantity</span>     = <span class="n">12</span>
+<span class="v">in_stock</span>     = <span class="kw">True</span>
+
+<span class="cm"># Variable names: lowercase_with_underscores</span>
+<span class="cm"># NOT: ProductName, not: product-name</span>
+
+<span class="cm"># Reassignment: the label moves to a new value</span>
+<span class="v">price</span> = <span class="n">44.99</span>   <span class="cm"># price is now 44.99</span>
+<span class="v">price</span> = <span class="v">price</span> + <span class="n">5</span>  <span class="cm"># price is now 49.99</span>
+      </div>
+    </div>
+    <div>
+      <div class="box box-v" style="margin-bottom:10px">
+        <span class="bi">🔑</span>
+        <div class="bb"><strong>= is assignment, not equality</strong>x = 5 means "point x at the value 5." It does NOT mean "x equals 5 forever." The variable can be reassigned at any time. For equality checking, use == (two equals signs).</div>
+      </div>
+      <div class="py">
+<span class="cm"># x = 5 means: put 5 in a box named x</span>
+<span class="v">x</span> = <span class="n">5</span>
+<span class="v">x</span> = <span class="v">x</span> + <span class="n">3</span>
+<span class="kw2">print</span>(<span class="v">x</span>)   <span class="cm"># → 8</span>
+
+<span class="cm"># == checks equality (returns True/False)</span>
+<span class="kw2">print</span>(<span class="v">x</span> == <span class="n">8</span>)  <span class="cm"># → True</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">3 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 1 · Data Types</span>
+  <h2>The Four Core Data Types</h2>
+  <h3>Python automatically infers the type — use type() to check</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># str — text, always in quotes</span>
+<span class="v">name</span> = <span class="s">"Alice"</span>
+<span class="v">city</span> = <span class="s">'Tampa'</span>  <span class="cm"># single or double quotes</span>
+
+<span class="cm"># int — whole numbers, no decimal</span>
+<span class="v">quantity</span> = <span class="n">12</span>
+<span class="v">year</span>     = <span class="n">2025</span>
+
+<span class="cm"># float — numbers with decimal</span>
+<span class="v">price</span>  = <span class="n">49.99</span>
+<span class="v">margin</span> = <span class="n">0.35</span>
+
+<span class="cm"># bool — True or False (capital T/F)</span>
+<span class="v">in_stock</span>  = <span class="kw">True</span>
+<span class="v">is_sale</span>   = <span class="kw">False</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Quiz Q1 verbatim:</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="n">3.14</span>))
+<span class="ok">&lt;class 'float'&gt;</span>
+
+<span class="cm"># type() tells you what kind of data</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="s">"hello"</span>))  <span class="ok"># str</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="n">42</span>))       <span class="ok"># int</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="kw">True</span>))    <span class="ok"># bool</span>
+
+<span class="cm"># Common trap: "True" is a str, True is a bool</span>
+<span class="v">a</span> = <span class="kw">True</span>      <span class="cm"># ← bool</span>
+<span class="v">b</span> = <span class="s">"True"</span>   <span class="cm"># ← str (not the same!)</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">4 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 1 · Output</span>
+  <h2>print() and f-strings</h2>
+  <h3>Quiz Q2 — f-string output is on every quiz in this course</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># print() displays output</span>
+<span class="kw2">print</span>(<span class="s">"Hello, world!"</span>)    <span class="ok"># Hello, world!</span>
+<span class="kw2">print</span>(<span class="v">price</span>)              <span class="ok"># 49.99</span>
+<span class="kw2">print</span>(<span class="v">name</span>, <span class="v">price</span>)       <span class="ok"># Alice 49.99</span>
+
+<span class="cm"># f-strings — embed variables in text</span>
+<span class="cm"># Quiz Q2 verbatim:</span>
+<span class="v">name</span>  = <span class="s">"Taylor"</span>
+<span class="v">price</span> = <span class="n">9.99</span>
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"{name} costs ${price}"</span>)
+<span class="ok">Taylor costs $9.99</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># More f-string examples</span>
+<span class="v">city</span> = <span class="s">"Tampa"</span>
+<span class="v">temp</span> = <span class="n">88</span>
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"It is {temp} degrees in {city}."</span>)
+<span class="ok">It is 88 degrees in Tampa.</span>
+
+<span class="cm"># Format numbers in f-strings</span>
+<span class="v">revenue</span> = <span class="n">12345.678</span>
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"Revenue: ${revenue:,.2f}"</span>)
+<span class="ok">Revenue: $12,345.68</span>
+
+<span class="cm"># The f before the quote is required</span>
+<span class="cm"># {variable} inside the string substitutes the value</span>
+      </div>
+      <div class="box box-v" style="margin-top:8px">
+        <span class="bi">⭐</span>
+        <div class="bb"><strong>Q2 Verbatim</strong>name="Taylor", price=9.99. print(f"{name} costs ${price}") → "Taylor costs $9.99". Know this cold — f-string tracing appears every week.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">5 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 2 · Operators</span>
+  <h2>Arithmetic Operators — Quiz Q3, Q4, Q5</h2>
+  <h3>Business formulas are just Python arithmetic with meaningful variable names</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Standard arithmetic</span>
+<span class="v">price</span>    = <span class="n">50</span>
+<span class="v">quantity</span> = <span class="n">3</span>
+
+<span class="cm"># Quiz Q3 verbatim:</span>
+<span class="v">revenue</span> = <span class="v">price</span> * <span class="v">quantity</span>
+<span class="kw2">print</span>(<span class="v">revenue</span>)
+<span class="ok">150</span>
+
+<span class="cm"># Quiz Q4 — integer division</span>
+<span class="kw2">print</span>(<span class="n">17</span> // <span class="n">5</span>)  <span class="ok"># → 3  (floor, drops remainder)</span>
+<span class="kw2">print</span>(<span class="n">17</span> /  <span class="n">5</span>)  <span class="ok"># → 3.4 (true division)</span>
+
+<span class="cm"># Quiz Q5 — modulo (remainder)</span>
+<span class="kw2">print</span>(<span class="n">17</span> % <span class="n">5</span>)   <span class="ok"># → 2  (17 = 3×5 + 2)</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Quiz Q6 — margin formula</span>
+<span class="v">cost</span>   = <span class="n">40</span>
+<span class="v">price</span>  = <span class="n">60</span>
+<span class="v">margin</span> = (<span class="v">price</span> - <span class="v">cost</span>) / <span class="v">price</span>
+<span class="kw2">print</span>(<span class="v">margin</span>)
+<span class="ok">0.3333333333333333</span>
+<span class="cm"># (60-40)/60 = 20/60 = 0.333...</span>
+
+<span class="cm"># All arithmetic operators</span>
+<span class="cm"># +  addition    -  subtraction</span>
+<span class="cm"># *  multiply    /  true division</span>
+<span class="cm"># // floor div   %  remainder</span>
+<span class="cm"># ** exponent    (  parens for order</span>
+      </div>
+      <div class="box box-b" style="margin-top:8px">
+        <span class="bi">⭐</span>
+        <div class="bb"><strong>Q3/Q4/Q5/Q6 Verbatim</strong>Q3: price=50, qty=3 → revenue=150. Q4: 17//5 = 3 (floor). Q5: 17%5 = 2 (remainder). Q6: (60-40)/60 = 0.333. Know all four.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">6 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 2 · Comparison &amp; Logic</span>
+  <h2>Comparison &amp; Logical Operators</h2>
+  <h3>Produce True/False — the foundation of all decision-making code</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Comparison operators → bool</span>
+<span class="v">x</span> = <span class="n">10</span>
+<span class="v">y</span> = <span class="n">3</span>
+<span class="kw2">print</span>(<span class="v">x</span> > <span class="v">y</span>)   <span class="ok"># True</span>
+<span class="kw2">print</span>(<span class="v">x</span> == <span class="v">y</span>)  <span class="ok"># False  (== not =)</span>
+<span class="kw2">print</span>(<span class="v">x</span> != <span class="v">y</span>)  <span class="ok"># True</span>
+<span class="kw2">print</span>(<span class="v">x</span> >= <span class="n">10</span>) <span class="ok"># True</span>
+
+<span class="cm"># Logical operators: and, or, not</span>
+<span class="v">score</span> = <span class="n">85</span>
+<span class="kw2">print</span>(<span class="v">score</span> > <span class="n">80</span> <span class="kw">and</span> <span class="v">score</span> < <span class="n">90</span>)  <span class="ok"># True</span>
+<span class="kw2">print</span>(<span class="v">score</span> > <span class="n">90</span> <span class="kw">or</span>  <span class="v">score</span> > <span class="n">80</span>)  <span class="ok"># True</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Business context: is order big enough?</span>
+<span class="v">order_value</span> = <span class="n">250</span>
+<span class="v">is_premium</span>  = <span class="v">order_value</span> >= <span class="n">200</span>
+<span class="kw2">print</span>(<span class="v">is_premium</span>)  <span class="ok"># True</span>
+
+<span class="cm"># Qualifies for free shipping AND discount?</span>
+<span class="v">ships_free</span> = <span class="v">order_value</span> > <span class="n">100</span>
+<span class="v">gets_disc</span>  = <span class="v">order_value</span> > <span class="n">200</span>
+<span class="kw2">print</span>(<span class="v">ships_free</span> <span class="kw">and</span> <span class="v">gets_disc</span>)  <span class="ok"># True</span>
+      </div>
+      <div class="box box-v" style="margin-top:8px">
+        <span class="bi">⚠️</span>
+        <div class="bb"><strong>= vs ==</strong>= is assignment (set a value). == is comparison (check equality). This is the #1 beginner error. x = 5 puts 5 in x. x == 5 returns True or False.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">7 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Part 3 · Type Conversion</span>
+  <h2>Converting Between Types</h2>
+  <h3>Python won't automatically convert — you must be explicit</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Explicit conversion functions</span>
+<span class="kw2">int</span>(<span class="s">"42"</span>)      <span class="cm"># "42" → 42 (string to int)</span>
+<span class="kw2">float</span>(<span class="s">"9.99"</span>)  <span class="cm"># "9.99" → 9.99 (string to float)</span>
+<span class="kw2">str</span>(<span class="n">100</span>)       <span class="cm"># 100 → "100" (int to string)</span>
+
+<span class="cm"># input() ALWAYS returns a string</span>
+<span class="v">qty_str</span> = <span class="kw2">input</span>(<span class="s">"Enter quantity: "</span>)
+<span class="v">qty</span> = <span class="kw2">int</span>(<span class="v">qty_str</span>)   <span class="cm"># convert before math!</span>
+
+<span class="cm"># Or in one line:</span>
+<span class="v">qty</span> = <span class="kw2">int</span>(<span class="kw2">input</span>(<span class="s">"Qty: "</span>))
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Type mismatch crash — common bug</span>
+<span class="v">price_str</span> = <span class="s">"49.99"</span>
+<span class="cm"># revenue = price_str * 3  ← TypeError!</span>
+<span class="v">revenue</span> = <span class="kw2">float</span>(<span class="v">price_str</span>) * <span class="n">3</span>   <span class="ok"># ✓</span>
+<span class="kw2">print</span>(<span class="v">revenue</span>)  <span class="ok"># 149.97</span>
+
+<span class="cm"># Check with type()</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="v">price_str</span>))    <span class="ok"># str</span>
+<span class="kw2">print</span>(<span class="kw2">type</span>(<span class="kw2">float</span>(<span class="v">price_str</span>)))  <span class="ok"># float</span>
+      </div>
+      <div class="box box-s" style="margin-top:8px">
+        <span class="bi">💡</span>
+        <div class="bb"><strong>This matters for pandas</strong>When you read CSV files (Week 4), every column starts as a string. You'll convert them explicitly — int(row["qty"]) and float(row["price"]). Understanding type conversion now makes Week 4 make sense.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">8 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Business Context</span>
+  <h2>Business Formulas in Python</h2>
+  <h3>Every business metric is just arithmetic with variables — now you can automate it</h3>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Retail pricing formulas</span>
+<span class="v">cost</span>          = <span class="n">40.00</span>
+<span class="v">price</span>         = <span class="n">65.00</span>
+<span class="v">quantity_sold</span> = <span class="n">150</span>
+
+<span class="v">revenue</span> = <span class="v">price</span> * <span class="v">quantity_sold</span>
+<span class="v">profit</span>  = (<span class="v">price</span> - <span class="v">cost</span>) * <span class="v">quantity_sold</span>
+<span class="v">margin</span>  = (<span class="v">price</span> - <span class="v">cost</span>) / <span class="v">price</span>
+
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"Revenue: ${revenue:,.2f}"</span>)
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"Profit:  ${profit:,.2f}"</span>)
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"Margin:  {margin:.1%}"</span>)
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="ok">Revenue: $9,750.00</span>
+<span class="ok">Profit:  $3,750.00</span>
+<span class="ok">Margin:  38.5%</span>
+
+<span class="cm"># These 6 lines replace an Excel worksheet</span>
+<span class="cm"># Change cost to 45: re-run → instant update</span>
+<span class="cm"># Scale to 10,000 products: same code</span>
+<span class="cm"># Add to GitHub: team uses same formula</span>
+      </div>
+      <div class="box box-b" style="margin-top:8px">
+        <span class="bi">🎯</span>
+        <div class="bb"><strong>Why This Matters</strong>Every data analysis job requires computing metrics: revenue, margin, growth rate, conversion rate. These are arithmetic. Python makes them reproducible and scalable. Week 1 formulas become Week 4 pandas columns.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">9 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Common Mistakes</span>
+  <h2>Week 1 Traps — Know These Before the Quiz</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="card c-w" style="margin-bottom:12px;background:rgba(248,113,113,.05)">
+        <div class="ct" style="color:#f87171">Using = instead of == in comparisons</div>
+        <div class="py" style="margin-top:8px;font-size:.85em;padding:10px 14px">
+<span class="cm"># Wrong:</span>
+<span class="kw">if</span> <span class="v">x</span> = <span class="n">5</span>:   <span class="err"># SyntaxError!</span>
+<span class="cm"># Right:</span>
+<span class="kw">if</span> <span class="v">x</span> == <span class="n">5</span>:  <span class="ok"># ✓</span>
+        </div>
+      </div>
+      <div class="card c-w" style="background:rgba(248,113,113,.05)">
+        <div class="ct" style="color:#f87171">Forgetting quotes around strings</div>
+        <div class="py" style="margin-top:8px;font-size:.85em;padding:10px 14px">
+<span class="err">name = Alice      # NameError</span>
+<span class="v">name</span> = <span class="s">"Alice"</span>   <span class="cm"># ✓</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="card c-w" style="margin-bottom:12px;background:rgba(248,113,113,.05)">
+        <div class="ct" style="color:#f87171">Math on strings instead of numbers</div>
+        <div class="py" style="margin-top:8px;font-size:.85em;padding:10px 14px">
+<span class="v">price</span> = <span class="s">"49.99"</span>
+<span class="err">total = price * 3   # TypeError!</span>
+<span class="v">total</span> = <span class="kw2">float</span>(<span class="v">price</span>) * <span class="n">3</span>  <span class="cm"># ✓</span>
+        </div>
+      </div>
+      <div class="card c-w" style="background:rgba(248,113,113,.05)">
+        <div class="ct" style="color:#f87171">// vs / confusion</div>
+        <div class="py" style="margin-top:8px;font-size:.85em;padding:10px 14px">
+<span class="n">17</span> / <span class="n">5</span>   <span class="ok"># 3.4  (true division)</span>
+<span class="n">17</span> // <span class="n">5</span>  <span class="ok"># 3    (floor — drops decimal)</span>
+<span class="n">17</span> % <span class="n">5</span>   <span class="ok"># 2    (remainder)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">10 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">★ Quiz Preview</span>
+  <h2>Week 1 Quiz — 6 Verbatim Questions</h2>
+  <div style="margin-top:14px">
+    <div class="qbox">
+      <div class="qq">Q1 · What is the output of: print(type(3.14))?</div>
+      <div class="qo">a) int &nbsp; b) str &nbsp; c) float &nbsp; d) bool</div>
+      <div class="qa">Answer: c) float</div>
+    </div>
+    <div class="qbox">
+      <div class="qq">Q2 (Code Trace) · What is the output?<br><code>name = "Taylor" &nbsp; price = 9.99 &nbsp; print(f"{name} costs ${price}")</code></div>
+      <div class="qa">Answer: Taylor costs $9.99</div>
+    </div>
+    <div class="qbox">
+      <div class="qq">Q3 (Code Trace) · price = 50, quantity = 3. revenue = price * quantity. print(revenue) →</div>
+      <div class="qa">Answer: 150</div>
+    </div>
+    <div class="qbox">
+      <div class="qq">Q4 · What is the result of 17 // 5?</div>
+      <div class="qo">a) 3.4 &nbsp; b) 2 &nbsp; c) 3 &nbsp; d) 4</div>
+      <div class="qa">Answer: c) 3 — integer (floor) division</div>
+    </div>
+    <div class="qbox">
+      <div class="qq">Q5 · What is the result of 17 % 5?</div>
+      <div class="qo">a) 3.4 &nbsp; b) 2 &nbsp; c) 3 &nbsp; d) 4</div>
+      <div class="qa">Answer: b) 2 — modulo returns the remainder</div>
+    </div>
+    <div class="qbox">
+      <div class="qq">Q6 (Code Trace) · cost=40, price=60. margin = (price-cost)/price. print(margin) →</div>
+      <div class="qa">Answer: 0.3333333333333333</div>
+    </div>
+  </div>
+  <span class="sn">11 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Reference</span>
+  <h2>Week 1 Cheat Sheet</h2>
+  <div class="g2" style="margin-top:12px">
+    <div>
+      <div class="py" style="font-size:.6em;padding:12px 16px">
+<span class="cm"># Types</span>
+<span class="v">s</span> = <span class="s">"text"</span>   <span class="cm"># str</span>
+<span class="v">n</span> = <span class="n">42</span>       <span class="cm"># int</span>
+<span class="v">f</span> = <span class="n">3.14</span>     <span class="cm"># float</span>
+<span class="v">b</span> = <span class="kw">True</span>     <span class="cm"># bool</span>
+<span class="kw2">type</span>(<span class="n">3.14</span>)   <span class="cm"># → float  (Q1)</span>
+
+<span class="cm"># Conversion</span>
+<span class="kw2">int</span>(<span class="s">"5"</span>)     <span class="cm"># "5" → 5</span>
+<span class="kw2">float</span>(<span class="s">"9.9"</span>) <span class="cm"># "9.9" → 9.9</span>
+<span class="kw2">str</span>(<span class="n">42</span>)      <span class="cm"># 42 → "42"</span>
+
+<span class="cm"># f-string</span>
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"{name} costs ${price}"</span>)  <span class="cm"># Q2</span>
+      </div>
+    </div>
+    <div>
+      <div class="py" style="font-size:.6em;padding:12px 16px">
+<span class="cm"># Arithmetic</span>
+<span class="n">50</span> * <span class="n">3</span>     <span class="cm"># 150       (Q3)</span>
+<span class="n">17</span> // <span class="n">5</span>   <span class="cm"># 3         (Q4)</span>
+<span class="n">17</span> % <span class="n">5</span>    <span class="cm"># 2         (Q5)</span>
+<span class="n">17</span> / <span class="n">5</span>    <span class="cm"># 3.4</span>
+(<span class="n">60</span>-<span class="n">40</span>)/<span class="n">60</span><span class="cm"># 0.333     (Q6)</span>
+
+<span class="cm"># Comparison (→ True/False)</span>
+<span class="v">x</span> == <span class="v">y</span>    <span class="cm"># equal</span>
+<span class="v">x</span> != <span class="v">y</span>    <span class="cm"># not equal</span>
+<span class="v">x</span> > <span class="v">y</span>     <span class="cm"># greater</span>
+<span class="v">x</span> >= <span class="v">y</span>    <span class="cm"># greater or equal</span>
+
+<span class="cm"># Logic</span>
+<span class="v">a</span> <span class="kw">and</span> <span class="v">b</span>   <span class="cm"># both True</span>
+<span class="v">a</span> <span class="kw">or</span>  <span class="v">b</span>   <span class="cm"># either True</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">12 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Assignments &amp; Reading</span>
+  <h2>This Week's Work</h2>
+  <div class="g2" style="margin-top:18px">
+    <div>
+      <div class="card c-v" style="margin-bottom:12px">
+        <div class="ct" style="color:var(--v)">DataCamp #1 — Python Data Fundamentals · Begins</div>
+        <div class="cb">Start DataCamp #1 today — due end of Week 2. Covers everything from today's class plus more. The first 2–3 modules align directly with this week's slides. Complete at least those before next class.</div>
+      </div>
+      <div class="card c-s">
+        <div class="ct" style="color:var(--s)">Week 1 Assignment</div>
+        <div class="cb">Submitted via Canvas (GitHub begins Week 3). Four parts: (1) declare variables for a product, (2) compute revenue/profit/margin, (3) format output with f-strings, (4) type conversion exercise. See assignment spec for full details.</div>
+      </div>
+    </div>
+    <div>
+      <div class="card c-i" style="margin-bottom:12px">
+        <div class="ct" style="color:var(--i)">Reading — Think Python Ch. 2</div>
+        <div class="cb">Variables and Statements covers everything from today's lecture in more depth. Focus on the variable assignment, expression evaluation, and operator sections. Free online: allendowney.github.io/ThinkPython</div>
+      </div>
+      <div class="box box-b">
+        <span class="bi">⚡</span>
+        <div class="bb"><strong>Accelerated Pace Reminder</strong>This week covers 4 weeks of content from the standard course. If anything feels unclear, post in the discussion board immediately — don't wait until next class. DataCamp exercises reinforce today's material with immediate feedback.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">13 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Preview</span>
+  <h2>Week 2 — Control Flow &amp; Functions</h2>
+  <div class="g2" style="margin-top:18px">
+    <div>
+      <div class="card c-v" style="margin-bottom:10px">
+        <div class="ct" style="color:var(--v)">Conditionals (if/elif/else)</div>
+        <div class="cb">Business decision logic: discount tiers, approval thresholds, flagging anomalies. if score >= 90: "A" — elif score >= 80: "B" — else: "C".</div>
+      </div>
+      <div class="card c-s" style="margin-bottom:10px">
+        <div class="ct" style="color:var(--s)">Loops (for, while, range)</div>
+        <div class="cb">Repeat operations over collections. Process every row in a dataset. Sum, filter, count. range(1, 6) → 1 2 3 4 5.</div>
+      </div>
+    </div>
+    <div>
+      <div class="card c-i" style="margin-bottom:10px">
+        <div class="ct" style="color:var(--i)">Functions (def, return)</div>
+        <div class="cb">Write once, use everywhere. def compute_revenue(price, qty): return price * qty. Reusable, testable, maintainable.</div>
+      </div>
+      <div class="card c-b">
+        <div class="ct" style="color:var(--b)">Debugging + AI Literacy</div>
+        <div class="cb">Reading tracebacks. Common error types (NameError, TypeError, SyntaxError). The "Debug First, Then Ask" exercise — using AI as an assistant, not a crutch.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">14 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Course Overview</span>
+  <h2>The 6-Week Journey</h2>
+  <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+    <div class="card c-v"><div class="ct" style="color:var(--v)">Wk 1 — Foundations</div><div class="cb">Variables, types, operators, formulas. The atoms of every program.</div></div>
+    <div class="card c-s"><div class="ct" style="color:var(--s)">Wk 2 — Control Flow</div><div class="cb">Conditionals, loops, functions, debugging. Think algorithmically.</div></div>
+    <div class="card c-i"><div class="ct" style="color:var(--i)">Wk 3 — Data &amp; GitHub</div><div class="cb">Lists, dicts, CSV files, Git. Store and retrieve structured data.</div></div>
+    <div class="card c-b"><div class="ct" style="color:var(--b)">Wk 4 — pandas</div><div class="cb">DataFrames, filtering, groupby. Industry-standard data analysis.</div></div>
+    <div class="card c-f"><div class="ct" style="color:var(--f)">Wk 5 — Cleaning &amp; Charts</div><div class="cb">Clean data, visualize with matplotlib and seaborn.</div></div>
+    <div class="card c-ok" style="border-left-color:var(--out)"><div class="ct" style="color:var(--out)">Wk 6 — Capstone</div><div class="cb">Load → clean → analyze → chart → present. Your portfolio.</div></div>
+  </div>
+  <div class="box box-v" style="margin-top:14px">
+    <span class="bi">🏁</span>
+    <div class="bb"><strong>The End Goal</strong>Week 6 you present a full data analysis of a 5,000-row retail dataset to your class using Python, pandas, and matplotlib — with your code on GitHub. That's 6 weeks of learning doing the work of 6 months of traditional coursework.</div>
+  </div>
+  <span class="sn">15 / 16</span>
+</section>
+
+<section>
+  <span class="lbl">Summary</span>
+  <h2>Week 1 Summary</h2>
+  <div class="g2" style="margin-top:18px">
+    <div>
+      <p style="font-size:.46em;color:var(--v);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">This Week You Learned</p>
+      <div class="card" style="margin-bottom:7px;font-size:.52em;padding:9px 13px">✓ Variables — named containers for values</div>
+      <div class="card" style="margin-bottom:7px;font-size:.52em;padding:9px 13px">✓ 4 data types: str, int, float, bool</div>
+      <div class="card" style="margin-bottom:7px;font-size:.52em;padding:9px 13px">✓ print() and f-strings for output (Q2)</div>
+      <div class="card" style="margin-bottom:7px;font-size:.52em;padding:9px 13px">✓ Arithmetic: * / // % ** (Q3, Q4, Q5)</div>
+      <div class="card" style="margin-bottom:7px;font-size:.52em;padding:9px 13px">✓ Business formulas: revenue, profit, margin (Q6)</div>
+      <div class="card" style="font-size:.52em;padding:9px 13px">✓ Type conversion: int(), float(), str()</div>
+    </div>
+    <div>
+      <p style="font-size:.46em;color:var(--out);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Next Week — Week 2</p>
+      <div class="card c-ok" style="border-left-color:var(--out)">
+        <div class="ct" style="color:var(--out)">Control Flow &amp; Functions</div>
+        <div class="cb">
+          if/elif/else — business decision logic<br>
+          for/while loops — process collections<br>
+          range(), break, continue<br>
+          def — writing reusable functions<br>
+          Debugging: reading tracebacks<br>
+          AI Literacy: Debug First, Then Ask<br><br>
+          <strong>DataCamp #1 due end of Week 2.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">16 / 16</span>
+</section>
+
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>
+Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});
+</script>
+</body>
+</html>

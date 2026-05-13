@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISM2411 6-Week Week 3</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08020c;--card:#140720;--bord:#221040;--text:#f0eaf8;--dim:#3a1a60;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --p:#a78bfa;--s:#34d399;--i:#22d3ee;--b:#fbbf24;--f:#f472b6;--out:#ede9fe;--w:#f87171;}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--p);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--p);}.reveal .controls{color:var(--p);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-p{border-left:3px solid var(--p);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid var(--w);}
+.py{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.65em;line-height:1.85;margin:10px 0;}
+.kw{color:var(--i);}.kw2{color:var(--s);}.ss{color:#fda4af;}.nn{color:#60a5fa;}
+.vv{color:var(--p);}.cm{color:rgba(255,255,255,.12);font-style:italic;}.ok{color:var(--out);}.err{color:var(--w);}
+.mt{color:var(--f);}.mo{color:var(--b);}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-p{background:rgba(255,255,255,.05);border-left:3px solid var(--p);}.box-p .bb strong{color:var(--p);}
+.box-s{background:rgba(255,255,255,.05);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(255,255,255,.05);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid var(--w);}.box-w .bb strong{color:var(--w);}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated 6-Week Week 3 of 6</span>
+  <h2>Data Structures, Files &amp; GitHub</h2>
+  <h3>Lists, Tuples, Dicts, CSV, Git, Midterm Mini-Exam</h3>
+  <div style="margin-top:1em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag" style="color:var(--p)">Lists &amp; Tuples</span>
+    <span class="tag" style="color:var(--s)">Dictionaries</span>
+    <span class="tag" style="color:var(--i)">CSV Files</span>
+    <span class="tag" style="color:var(--b)">GitHub</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">&#x1F4CB;</span>
+    <div class="bb"><strong>Midterm Mini-Exam End of This Week</strong>DC#8 and #9 (Git/GitHub) both due this week. 30-min closed-notes exam covering Weeks 1-3.</div>
+  </div>
+  <span class="sn">1 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 1</span>
+  <h2>Lists -- Q1</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-p" style="margin-bottom:8px">
+        <span class="bi">&#x2B50;</span>
+        <div class="bb"><strong>Q1 Verbatim</strong>["apples","bananas"].append("oranges").remove("bananas") = ["apples","oranges"].</div>
+      </div>
+      <div class="py">
+<span class="vv">inventory</span> = [<span class="ss">"apples"</span>, <span class="ss">"bananas"</span>]
+<span class="vv">inventory</span>.<span class="mt">append</span>(<span class="ss">"oranges"</span>)
+<span class="vv">inventory</span>.<span class="mt">remove</span>(<span class="ss">"bananas"</span>)
+<span class="kw2">print</span>(<span class="vv">inventory</span>)
+<span class="ok">['apples', 'oranges']</span>
+<span class="cm"># Tuple = immutable (Q4)</span>
+<span class="vv">coords</span> = (<span class="nn">40.71</span>, -<span class="nn">74.01</span>)
+<span class="cm"># coords[0] = 99  # TypeError!</span>
+<span class="kw2">print</span>(<span class="kw2">len</span>(<span class="vv">coords</span>))  <span class="ok"># 2</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Dict -- Q2, Q6</span>
+<span class="vv">customer</span> = {<span class="ss">"name"</span>: <span class="ss">"Alice"</span>, <span class="ss">"age"</span>: <span class="nn">30</span>}
+<span class="kw2">print</span>(<span class="vv">customer</span>[<span class="ss">"name"</span>])  <span class="ok"># Alice (Q2)</span>
+<span class="cm"># .get() with default (Q6):</span>
+<span class="kw2">print</span>(<span class="vv">customer</span>.<span class="mt">get</span>(<span class="ss">"phone"</span>, <span class="ss">"Not found"</span>))
+<span class="ok">Not found</span>
+<span class="cm"># Iterate keys:</span>
+<span class="kw">for</span> <span class="vv">item</span> <span class="kw">in</span> {<span class="ss">"apples"</span>:<span class="nn">10</span>,<span class="ss">"bananas"</span>:<span class="nn">5</span>}:
+    <span class="kw2">print</span>(<span class="vv">item</span>)  <span class="ok"># keys only (Q7)</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">2 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 2</span>
+  <h2>CSV Files and GitHub -- Q3, Q5</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-s" style="margin-bottom:8px">
+        <span class="bi">&#x2B50;</span>
+        <div class="bb"><strong>Q3 + Q5 Verbatim</strong>Q3: csv module (not pandas). Q5: relative paths work on any machine.</div>
+      </div>
+      <div class="py">
+<span class="kw">import</span> csv
+<span class="kw">with</span> <span class="kw2">open</span>(<span class="ss">"data/sales.csv"</span>) <span class="kw">as</span> <span class="vv">f</span>:
+    <span class="kw">for</span> <span class="vv">row</span> <span class="kw">in</span> csv.<span class="mt">DictReader</span>(<span class="vv">f</span>):
+        <span class="vv">qty</span>   = <span class="kw2">int</span>(<span class="vv">row</span>[<span class="ss">"qty"</span>])
+        <span class="vv">price</span> = <span class="kw2">float</span>(<span class="vv">row</span>[<span class="ss">"price"</span>])
+<span class="cm"># Always convert! DictReader = strings.</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># GitHub -- first push this week</span>
+<span class="ok">git init</span>
+<span class="ok">git add .</span>
+<span class="ok">git commit -m "Week 3 complete"</span>
+<span class="ok">git push origin main</span>
+      </div>
+      <div class="box box-p" style="margin-top:10px">
+        <span class="bi">&#x1F3C1;</span>
+        <div class="bb"><strong>Midterm End of Week 3</strong>30 min, closed notes. All 18 verbatim quiz answers from Weeks 1-3 are fair game. Review them all.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">3 / 12</span>
+</section>
+<section>
+  <span class="lbl">Quiz Preview</span>
+  <h2>Week 3 Quiz -- 6 Key Questions</h2>
+  <div style="margin-top:14px">
+    <div class="qbox"><div class="qq">Q1 -- ["apples","bananas"].append("oranges").remove("bananas")</div><div class="qa">['apples', 'oranges']</div></div>
+    <div class="qbox"><div class="qq">Q2 -- customer={"name":"Alice","age":30}, print(customer["name"])</div><div class="qa">Alice</div></div>
+    <div class="qbox"><div class="qq">Q3 -- Which module reads/writes CSV? a)file b)csv c)pandas d)io</div><div class="qa">b) csv -- built into Python</div></div>
+    <div class="qbox"><div class="qq">Q4 -- Key difference: list vs tuple?</div><div class="qa">c) Tuples are immutable; lists are mutable</div></div>
+    <div class="qbox"><div class="qq">Q5 -- Why use relative file paths?</div><div class="qa">b) Work on any machine regardless of where stored</div></div>
+    <div class="qbox"><div class="qq">Q6 -- customer.get("phone", "Not found") when phone missing</div><div class="qa">"Not found" -- .get() returns the default</div></div>
+  </div>
+  <span class="sn">4 / 12</span>
+</section>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});</script>
+</body></html>

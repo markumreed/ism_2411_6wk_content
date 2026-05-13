@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>ISM2411 6-Week · Week 1 Lecture Notes</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;background:#f7f8fc}
+.pw{max-width:860px;margin:0 auto;padding:32px 24px 64px}
+.banner{background:linear-gradient(135deg,#020c14 0%,#04304a 100%);border-radius:10px;padding:26px 32px;margin-bottom:24px;color:#fff}
+.banner .ey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#22d3ee;margin-bottom:6px;font-weight:600}
+.banner h1{font-size:21px;font-weight:700;margin-bottom:4px}
+.banner .su{font-size:13px;color:#cffafe}
+.br{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase}
+.b-v{background:rgba(34,211,238,.2);color:#a5f3fc;border:1px solid rgba(34,211,238,.3)}
+.b-y{background:rgba(251,191,36,.2);color:#fef08a;border:1px solid rgba(251,191,36,.3)}
+.b-r{background:rgba(252,165,165,.2);color:#fca5a5;border:1px solid rgba(252,165,165,.3)}
+.sec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:20px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #f1f5f9}
+.si{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sh-t h2{font-size:15px;font-weight:700;color:#1e293b;margin:0}
+.sh-t .ti{font-size:11px;color:#94a3b8;margin-top:1px}
+.sb{padding:20px}
+.py{background:#020c14;color:#e8f4ff;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.8;padding:14px 18px;border-radius:8px;margin:10px 0}
+.kw{color:#818cf8}.kw2{color:#34d399}.s{color:#fda4af}.n{color:#60a5fa}.v{color:#22d3ee}.cm{color:#0a2030;font-style:italic}.ok{color:#cffafe}
+code{font-family:'Courier New',monospace;font-size:12.5px;background:#cffafe;color:#164e63;padding:1px 5px;border-radius:3px}
+.cal{border-radius:8px;padding:14px 16px;margin:12px 0;font-size:13.5px;line-height:1.6;display:flex;gap:12px;align-items:flex-start}
+.ci{font-size:18px;flex-shrink:0;margin-top:1px}.cb{flex:1}
+.cb strong{display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.cal-v{background:#f0fdfe;border-left:3px solid #0891b2}.cal-v .cb strong{color:#164e63}
+.cal-w{background:#fff7ed;border-left:3px solid #f97316}.cal-w .cb strong{color:#c2410c}
+.cal-ok{background:#f0fdf4;border-left:3px solid #22c55e}.cal-ok .cb strong{color:#166534}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0}
+.tbl thead th{background:#04304a;color:#cffafe;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 14px;text-align:left}
+.tbl tbody td{padding:9px 14px;border-bottom:1px solid #f1f5f9;color:#334155;vertical-align:top}
+.tbl tbody tr:nth-child(odd) td{background:#f8fafc}
+.tbl tbody tr:last-child td{border-bottom:none}
+.sched{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.sched td{padding:9px 14px;border-bottom:1px solid #f1f5f9;vertical-align:top}
+.sched td:first-child{width:120px;font-family:'Courier New',monospace;font-size:12px;font-weight:600;color:#64748b;white-space:nowrap}
+.sched tr:nth-child(odd) td{background:#f8fafc}
+.sched tr:last-child td{border-bottom:none}
+p{font-size:14px;color:#334155;line-height:1.7;margin-bottom:10px}
+h3{font-size:14px;font-weight:700;color:#1e293b;margin:16px 0 8px}
+ul{padding-left:20px;margin-bottom:10px}
+li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
+.pf{text-align:center;font-size:11px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0}
+</style></head>
+<body><div class="pw">
+<div class="banner">
+  <div class="ey">ISM2411 · 6-Week Accelerated · USF Muma College of Business</div>
+  <h1>Week 1 Lecture Notes — Python Foundations</h1>
+  <div class="su">Instructor Copy · Variables, Types, Operators, Expressions, f-strings</div>
+  <div class="br">
+    <span class="badge b-v">Week 1 of 6</span>
+    <span class="badge b-y">DataCamp #1 Begins</span>
+    <span class="badge b-r">Covers 16-Wk Weeks 2–5</span>
+  </div>
+</div>
+
+<div class="cal cal-w"><span class="ci">⚡</span>
+<div class="cb"><strong>Accelerated Format — Set Expectations Now</strong>This week covers ~4 weeks of the standard ISM2411 course. Tell students on Day 1: budget 10 hours this week (not 6). DataCamp #1 is the key reinforcement tool — they must start it today. Everything from this lecture gets practiced again in DataCamp.</div></div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">🎯</div><div class="sh-t"><h2>Learning Objectives</h2></div></div>
+  <div class="sb">
+    <ul>
+      <li>Declare variables with meaningful names using Python naming conventions</li>
+      <li>Identify and use four core data types: str, int, float, bool</li>
+      <li>Use print() and f-strings to format business output — Quiz Q2</li>
+      <li>Apply arithmetic operators: +, -, *, /, //, %, ** — Quiz Q3, Q4, Q5</li>
+      <li>Write business formulas: revenue, profit, margin — Quiz Q6</li>
+      <li>Use comparison (==, !=, >, <, >=, <=) and logical (and, or, not) operators</li>
+      <li>Convert between types: int(), float(), str()</li>
+      <li>Explain why type() returns float for 3.14 — Quiz Q1</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">📝</div><div class="sh-t"><h2>Part 1 — Variables &amp; Data Types</h2><div class="ti">~25 min · Q1</div></div></div>
+  <div class="sb">
+    <h3>1.1 — Variables as Labeled Containers</h3>
+    <p>Start with the analogy: a variable is a sticky note attached to a box. The note has a name (the variable name) and the box holds a value. The note can be moved to a new box (reassignment). Python remembers where the note is pointing.</p>
+    <div class="py">
+<span class="v">product_name</span> = <span class="s">"Widget Pro"</span>   <span class="cm"># str</span>
+<span class="v">price</span>        = <span class="n">49.99</span>          <span class="cm"># float</span>
+<span class="v">quantity</span>     = <span class="n">12</span>             <span class="cm"># int</span>
+<span class="v">in_stock</span>     = <span class="kw">True</span>           <span class="cm"># bool</span>
+    </div>
+    <div class="cal cal-v"><span class="ci">⭐</span>
+    <div class="cb"><strong>Quiz Q1 Verbatim</strong>print(type(3.14)) → &lt;class 'float'&gt;. The answer is c) float. 3.14 has a decimal point so Python infers float. Common wrong answer: int. Demonstrate type() on all four types live — str, int, float, bool.</div></div>
+
+    <h3>1.2 — Four Core Types</h3>
+    <table class="tbl">
+      <thead><tr><th>Type</th><th>Example</th><th>Business Use</th><th>Common Mistake</th></tr></thead>
+      <tbody>
+        <tr><td>str</td><td>"Widget", 'North'</td><td>Product names, regions, categories</td><td>Forgetting quotes: name = Alice → NameError</td></tr>
+        <tr><td>int</td><td>12, 2025</td><td>Quantities, store IDs, years</td><td>Using 12.0 when int is expected</td></tr>
+        <tr><td>float</td><td>49.99, 0.35</td><td>Prices, percentages, margins</td><td>Math on string "49.99" → TypeError</td></tr>
+        <tr><td>bool</td><td>True, False</td><td>in_stock, is_approved, has_discount</td><td>"True" (str) vs True (bool) — different!</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">🖨️</div><div class="sh-t"><h2>Part 2 — Output &amp; f-strings</h2><div class="ti">~15 min · Q2</div></div></div>
+  <div class="sb">
+    <div class="cal cal-v"><span class="ci">⭐</span>
+    <div class="cb"><strong>Quiz Q2 Verbatim — Must Know Cold</strong>name="Taylor", price=9.99. print(f"{name} costs ${price}") → "Taylor costs $9.99". Teach students to read the f-string from left to right: f prefix, open quote, literal text, {variable} substitution, more literal text, close quote. The $ before {price} is a literal dollar sign — it's not part of the f-string syntax.</div></div>
+    <div class="py">
+<span class="v">name</span>  = <span class="s">"Taylor"</span>
+<span class="v">price</span> = <span class="n">9.99</span>
+<span class="kw2">print</span>(<span class="v">f</span><span class="s">"{name} costs ${price}"</span>)   <span class="cm"># Q2: Taylor costs $9.99</span>
+    </div>
+    <div class="cal cal-w"><span class="ci">⚠️</span>
+    <div class="cb"><strong>Common f-string errors</strong>Forgetting the f prefix (just a regular string — no substitution). Forgetting curly braces (prints the variable name literally). Using parentheses instead of curly braces. Show all three errors live.</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">🔢</div><div class="sh-t"><h2>Part 3 — Operators &amp; Business Formulas</h2><div class="ti">~25 min · Q3, Q4, Q5, Q6</div></div></div>
+  <div class="sb">
+    <div class="cal cal-v"><span class="ci">⭐</span>
+    <div class="cb"><strong>Quiz Q3, Q4, Q5, Q6 — All Live Code Traces</strong>Q3: price=50, qty=3 → revenue=150 (multiplication). Q4: 17//5 = 3 (floor division — drops decimal). Q5: 17%5 = 2 (remainder: 17 = 3×5 + 2). Q6: cost=40, price=60, margin=(60-40)/60 = 20/60 = 0.333. Write these on the board. Have students trace before running.</div></div>
+    <div class="py">
+<span class="cm"># Q3: multiplication</span>
+<span class="v">revenue</span> = <span class="n">50</span> * <span class="n">3</span>      <span class="cm"># → 150</span>
+
+<span class="cm"># Q4: floor division (// drops decimal, keeps int)</span>
+<span class="kw2">print</span>(<span class="n">17</span> // <span class="n">5</span>)        <span class="cm"># → 3 (not 3.4)</span>
+
+<span class="cm"># Q5: modulo (remainder after floor division)</span>
+<span class="kw2">print</span>(<span class="n">17</span> % <span class="n">5</span>)         <span class="cm"># → 2 (17 = 3×5 + 2)</span>
+
+<span class="cm"># Q6: margin formula</span>
+<span class="v">margin</span> = (<span class="n">60</span> - <span class="n">40</span>) / <span class="n">60</span>   <span class="cm"># → 0.3333...</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#fef9c3">🕐</div><div class="sh-t"><h2>Suggested Class Schedule (75 min)</h2></div></div>
+  <div class="sb">
+    <table class="sched">
+      <tbody>
+        <tr><td>0:00–0:10</td><td>Course intro — 6-week format, DataCamp expectations, GitHub setup (Week 3). Set pace expectations: 10 hrs/week.</td></tr>
+        <tr><td>0:10–0:30</td><td>Part 1: Variables, data types, type(). Live code all four types. Q1 setup: print(type(3.14)) trace live.</td></tr>
+        <tr><td>0:30–0:45</td><td>Part 2: print(), f-strings. Q2 verbatim trace. Show common f-string errors.</td></tr>
+        <tr><td>0:45–1:10</td><td>Part 3: Arithmetic operators. Q3/Q4/Q5/Q6 all traced live. Business formula demo: revenue, profit, margin. Students code along.</td></tr>
+        <tr><td>1:10–1:15</td><td>Quiz preview, assignment intro, DataCamp #1 orientation. "Start it tonight."</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="pf">ISM2411 · 6-Week Accelerated · Week 1 Lecture Notes · USF Muma College of Business</div>
+</div></body></html>

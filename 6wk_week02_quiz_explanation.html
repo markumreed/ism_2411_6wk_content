@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>ISM2411 6-Week · Week 2 Quiz Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;background:#f7f8fc}
+.pw{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+.banner{border-radius:10px;padding:26px 30px;margin-bottom:24px;color:#fff}
+.banner .ey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.banner h1{font-size:21px;font-weight:700;margin-bottom:4px}
+.banner .su{font-size:13px;margin-bottom:14px}
+.br{display:flex;gap:8px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase}
+.ms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.mi{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:11px 14px}
+.mi .ml{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;margin-bottom:2px}
+.mi .mv{font-size:13px;font-weight:600;color:#1e293b}
+.part{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:20px;overflow:hidden}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #f1f5f9}
+.phl{display:flex;align-items:center;gap:12px}
+.pnum{width:38px;height:38px;border-radius:50%;color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ph h2{font-size:15px;font-weight:700;color:#1e293b;margin:0}
+.ph-sub{font-size:12px;color:#64748b;margin-top:1px}
+.pts{background:#f1f5f9;border:1px solid #cbd5e1;color:#334155;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px}
+.pb{padding:20px}
+.py{background:#020c14;color:#e8f4ff;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.8;padding:14px 18px;border-radius:8px;margin:10px 0;overflow-x:auto}
+code{font-family:'Courier New',monospace;font-size:12.5px;background:#cffafe;color:#164e63;padding:1px 5px;border-radius:3px}
+.qblock{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin:10px 0}
+.qblock .ql{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+.qblock p{font-size:13.5px;color:#1e293b;line-height:1.65;margin:0}
+.cal{border-radius:8px;padding:12px 16px;margin:12px 0;font-size:13px;line-height:1.6;display:flex;gap:10px;align-items:flex-start}
+.ci{font-size:17px;flex-shrink:0;margin-top:1px}.cb{flex:1}
+.cb strong{display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0}
+.tbl thead th{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 14px;text-align:left}
+.tbl tbody td{padding:9px 14px;border-bottom:1px solid #f1f5f9;color:#334155}
+.tbl tbody tr:nth-child(odd) td{background:#f8fafc}
+.tbl tbody tr:last-child td{border-bottom:none}
+.checklist{list-style:none;padding:0;margin:12px 0}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13.5px;color:#334155}
+.checklist li:last-child{border-bottom:none}
+.cb-box{width:18px;height:18px;border:2px solid #cbd5e1;border-radius:4px;flex-shrink:0;margin-top:2px}
+.stbl{width:100%;border-collapse:collapse;font-size:13px;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0}
+.stbl thead th{color:#fff;padding:10px 14px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}
+.stbl tbody td{padding:10px 14px;border-bottom:1px solid #f1f5f9;color:#334155}
+.stbl tbody tr:nth-child(odd) td{background:#f8fafc}
+.stbl tbody tr:last-child td{border-bottom:none;font-weight:700;background:#f1f5f9}
+.qc{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:14px;overflow:hidden}
+.qch{display:flex;align-items:center;justify-content:space-between;padding:11px 18px;background:#f8fafc;border-bottom:1px solid #f1f5f9}
+.qnum{font-family:'Courier New',monospace;font-size:11px;font-weight:700;color:#64748b;letter-spacing:.08em}
+.qtag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:2px 8px;border-radius:10px}
+.qcb{padding:14px 18px}
+.qt{font-size:13.5px;font-weight:600;color:#1e293b;margin-bottom:10px;line-height:1.5}
+.qopts{list-style:none;padding:0;margin-bottom:10px}
+.qopts li{display:flex;align-items:flex-start;gap:8px;padding:6px 10px;border-radius:5px;font-size:13px;color:#475569;margin-bottom:3px;border:1px solid transparent}
+.qopts li.correct{font-weight:600}
+.ol-wrap{width:20px;height:20px;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ol-d{background:#e2e8f0;color:#64748b}
+.expl{border-left:3px solid;border-radius:0 6px 6px 0;padding:10px 14px;margin-top:8px}
+.expl .el{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.expl p{font-size:12.5px;line-height:1.55;margin:0}
+.closing{border-radius:10px;padding:20px 24px;margin-top:24px;color:#f0eaf8}
+.closing h3{font-size:14px;font-weight:700;margin-bottom:8px}
+.closing p{font-size:13.5px;line-height:1.65}
+p{font-size:13.5px;color:#334155;line-height:1.7;margin-bottom:8px}
+h3{font-size:13.5px;font-weight:700;color:#1e293b;margin:14px 0 8px}
+ul{padding-left:18px;margin-bottom:8px}
+li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
+.pf{text-align:center;font-size:11px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0;letter-spacing:.05em}
+
+.banner{background:linear-gradient(135deg,#020c08 0%,#064018 100%);}
+.banner .ey{color:#34d399;}
+</style></head>
+<body><div class="pw">
+<div class="banner">
+  <div class="ey">ISM2411 · 6-Week Accelerated · USF Muma College of Business</div>
+  <h1>Week 2 Quiz — Study Guide &amp; Question Explanations</h1>
+  <div class="su">Control Flow & Functions · if/elif/else · Loops · def · Debugging · AI Literacy</div>
+  <div class="br">
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">Week 2 of 6</span>
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">Closed Notes</span>
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">10-Question Bank</span>
+  </div>
+</div>
+<div class="ms">
+  <div class="mi"><div class="ml">Format</div><div class="mv">MC + Code Tracing</div></div>
+  <div class="mi"><div class="ml">Time</div><div class="mv">~15 minutes</div></div>
+  <div class="mi"><div class="ml">Questions</div><div class="mv">5–8 from bank of 10</div></div>
+</div>
+
+<div class="qc">
+  <div class="qch"><span class="qnum">Q01</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — if/elif/else</span></div>
+  <div class="qcb">
+    <div class="qt">score = 85<br>if score >= 90:<br>    print("A")<br>elif score >= 80:<br>    print("B")<br>else:<br>    print("C")</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>A</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>B</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>C</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">85 < 90 so first condition fails. 85 >= 80 is True so elif runs and prints "B". Verbatim Q1.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q02</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — for loop sum</span></div>
+  <div class="qcb">
+    <div class="qt">total = 0<br>for i in range(1, 6):<br>    total += i<br>print(total)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>6</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>10</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>15</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>21</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">range(1,6) = [1,2,3,4,5]. Sum = 1+2+3+4+5 = 15. Verbatim Q2.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q03</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — elif keyword</span></div>
+  <div class="qcb">
+    <div class="qt">Which keyword introduces an alternative condition after if?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>else</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>then</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>elif</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>elseif</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">elif (else-if) introduces an additional condition. Python does not use "then" or "elseif". Verbatim Q3.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q04</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — function with return</span></div>
+  <div class="qcb">
+    <div class="qt">def compute_tax(price, rate):<br>    return price * rate<br>result = compute_tax(100, 0.07)<br>print(result)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>7</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>107</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>0.07</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">d</span>7.0</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">100 * 0.07 = 7.0 (float because rate is float). The function returns 7.0.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q05</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — break usage</span></div>
+  <div class="qcb">
+    <div class="qt">What does break do inside a loop?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>Skips to the next iteration</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>Exits the loop immediately</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>Restarts the loop from the beginning</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Pauses execution</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">break exits the loop immediately. continue skips to the next iteration. break is used to exit early when a condition is met.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q06</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — def greet</span></div>
+  <div class="qcb">
+    <div class="qt">def greet(name):<br>    message = f"Hello, {name}!"<br>    return message<br>print(greet("Alice"))</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>Hello, name!</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>message</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>Hello, Alice!</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">greet("Alice") calls the function with name="Alice". f"Hello, {name}!" → "Hello, Alice!". The function returns it. print() displays it.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q07</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — while loop</span></div>
+  <div class="qcb">
+    <div class="qt">When does a while loop stop executing?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>After exactly 10 iterations</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>When its condition becomes False</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>When break is called</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">d</span>Both b and c</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">A while loop stops when its condition is False OR when break is explicitly called. Both are valid exit mechanisms.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q08</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — conditional business</span></div>
+  <div class="qcb">
+    <div class="qt">discount = 0<br>total = 120<br>if total > 100:<br>    discount = 10<br>print(discount)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>0</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>10</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>120</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">120 > 100 is True, so discount = 10 executes. Output: 10. Verbatim (Week 2 Q3).</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q09</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — return vs print</span></div>
+  <div class="qcb">
+    <div class="qt">What is the difference between print() and return inside a function?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>They are identical</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>print() shows output; return sends a value back to the caller</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>return shows output; print() sends a value back</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>return only works inside loops</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">print() displays to the screen but the value is not usable by the calling code. return sends the value back so it can be stored, used in calculations, or passed to other functions.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q10</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — range</span></div>
+  <div class="qcb">
+    <div class="qt">for i in range(3):<br>    print(i)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>1 2 3</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>0 1 2 3</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>0 1 2</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#34d399">
+      <div class="el" style="color:#065f46">Explanation</div>
+      <p style="color:#065f46">range(3) = [0, 1, 2]. range(n) starts at 0 and goes up to (not including) n. Prints: 0, 1, 2 on separate lines.</p>
+    </div>
+  </div>
+</div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px;margin-top:20px">
+  <h2 style="font-size:14px;font-weight:700;color:#1e293b;margin-bottom:14px">Quick Reference Answer Key</h2>
+  <table class="tbl">
+    <thead><tr><th style="background:#059669;color:#fff">Q</th><th style="background:#059669;color:#fff">Answer</th><th style="background:#059669;color:#fff">Topic</th></tr></thead>
+    <tbody><tr><td>Q01</td><td style='text-align:center;font-weight:700;color:#059669'>B</td><td>if/elif/else</td></tr>
+<tr><td>Q02</td><td style='text-align:center;font-weight:700;color:#059669'>C</td><td>for loop sum</td></tr>
+<tr><td>Q03</td><td style='text-align:center;font-weight:700;color:#059669'>C</td><td>elif keyword</td></tr>
+<tr><td>Q04</td><td style='text-align:center;font-weight:700;color:#059669'>D</td><td>function with return</td></tr>
+<tr><td>Q05</td><td style='text-align:center;font-weight:700;color:#059669'>B</td><td>break usage</td></tr>
+<tr><td>Q06</td><td style='text-align:center;font-weight:700;color:#059669'>C</td><td>def greet</td></tr>
+<tr><td>Q07</td><td style='text-align:center;font-weight:700;color:#059669'>D</td><td>while loop</td></tr>
+<tr><td>Q08</td><td style='text-align:center;font-weight:700;color:#059669'>B</td><td>conditional business</td></tr>
+<tr><td>Q09</td><td style='text-align:center;font-weight:700;color:#059669'>B</td><td>return vs print</td></tr>
+<tr><td>Q10</td><td style='text-align:center;font-weight:700;color:#059669'>C</td><td>range</td></tr></tbody>
+  </table>
+</div>
+<div class="pf">ISM2411 · 6-Week Accelerated · Week 2 Quiz Study Guide · USF Muma College of Business</div>
+</div></body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>ISM2411 6-Week · Week 3 Quiz Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;background:#f7f8fc}
+.pw{max-width:820px;margin:0 auto;padding:32px 24px 64px}
+.banner{border-radius:10px;padding:26px 30px;margin-bottom:24px;color:#fff}
+.banner .ey{font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+.banner h1{font-size:21px;font-weight:700;margin-bottom:4px}
+.banner .su{font-size:13px;margin-bottom:14px}
+.br{display:flex;gap:8px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase}
+.ms{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.mi{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:11px 14px}
+.mi .ml{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;margin-bottom:2px}
+.mi .mv{font-size:13px;font-weight:600;color:#1e293b}
+.part{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:20px;overflow:hidden}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #f1f5f9}
+.phl{display:flex;align-items:center;gap:12px}
+.pnum{width:38px;height:38px;border-radius:50%;color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ph h2{font-size:15px;font-weight:700;color:#1e293b;margin:0}
+.ph-sub{font-size:12px;color:#64748b;margin-top:1px}
+.pts{background:#f1f5f9;border:1px solid #cbd5e1;color:#334155;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px}
+.pb{padding:20px}
+.py{background:#020c14;color:#e8f4ff;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.8;padding:14px 18px;border-radius:8px;margin:10px 0;overflow-x:auto}
+code{font-family:'Courier New',monospace;font-size:12.5px;background:#cffafe;color:#164e63;padding:1px 5px;border-radius:3px}
+.qblock{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin:10px 0}
+.qblock .ql{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+.qblock p{font-size:13.5px;color:#1e293b;line-height:1.65;margin:0}
+.cal{border-radius:8px;padding:12px 16px;margin:12px 0;font-size:13px;line-height:1.6;display:flex;gap:10px;align-items:flex-start}
+.ci{font-size:17px;flex-shrink:0;margin-top:1px}.cb{flex:1}
+.cb strong{display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0}
+.tbl thead th{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:9px 14px;text-align:left}
+.tbl tbody td{padding:9px 14px;border-bottom:1px solid #f1f5f9;color:#334155}
+.tbl tbody tr:nth-child(odd) td{background:#f8fafc}
+.tbl tbody tr:last-child td{border-bottom:none}
+.checklist{list-style:none;padding:0;margin:12px 0}
+.checklist li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13.5px;color:#334155}
+.checklist li:last-child{border-bottom:none}
+.cb-box{width:18px;height:18px;border:2px solid #cbd5e1;border-radius:4px;flex-shrink:0;margin-top:2px}
+.stbl{width:100%;border-collapse:collapse;font-size:13px;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0}
+.stbl thead th{color:#fff;padding:10px 14px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em}
+.stbl tbody td{padding:10px 14px;border-bottom:1px solid #f1f5f9;color:#334155}
+.stbl tbody tr:nth-child(odd) td{background:#f8fafc}
+.stbl tbody tr:last-child td{border-bottom:none;font-weight:700;background:#f1f5f9}
+.qc{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:14px;overflow:hidden}
+.qch{display:flex;align-items:center;justify-content:space-between;padding:11px 18px;background:#f8fafc;border-bottom:1px solid #f1f5f9}
+.qnum{font-family:'Courier New',monospace;font-size:11px;font-weight:700;color:#64748b;letter-spacing:.08em}
+.qtag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:2px 8px;border-radius:10px}
+.qcb{padding:14px 18px}
+.qt{font-size:13.5px;font-weight:600;color:#1e293b;margin-bottom:10px;line-height:1.5}
+.qopts{list-style:none;padding:0;margin-bottom:10px}
+.qopts li{display:flex;align-items:flex-start;gap:8px;padding:6px 10px;border-radius:5px;font-size:13px;color:#475569;margin-bottom:3px;border:1px solid transparent}
+.qopts li.correct{font-weight:600}
+.ol-wrap{width:20px;height:20px;border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.ol-d{background:#e2e8f0;color:#64748b}
+.expl{border-left:3px solid;border-radius:0 6px 6px 0;padding:10px 14px;margin-top:8px}
+.expl .el{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.expl p{font-size:12.5px;line-height:1.55;margin:0}
+.closing{border-radius:10px;padding:20px 24px;margin-top:24px;color:#f0eaf8}
+.closing h3{font-size:14px;font-weight:700;margin-bottom:8px}
+.closing p{font-size:13.5px;line-height:1.65}
+p{font-size:13.5px;color:#334155;line-height:1.7;margin-bottom:8px}
+h3{font-size:13.5px;font-weight:700;color:#1e293b;margin:14px 0 8px}
+ul{padding-left:18px;margin-bottom:8px}
+li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
+.pf{text-align:center;font-size:11px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0;letter-spacing:.05em}
+
+.banner{background:linear-gradient(135deg,#08020c 0%,#2d0a50 100%);}
+.banner .ey{color:#a78bfa;}
+</style></head>
+<body><div class="pw">
+<div class="banner">
+  <div class="ey">ISM2411 · 6-Week Accelerated · USF Muma College of Business</div>
+  <h1>Week 3 Quiz — Study Guide &amp; Question Explanations</h1>
+  <div class="su">Data Structures, Files & GitHub · Lists · Tuples · Dicts · CSV Files · Git · GitHub</div>
+  <div class="br">
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">Week 3 of 6</span>
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">Closed Notes</span>
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3)">10-Question Bank</span>
+  </div>
+</div>
+<div class="ms">
+  <div class="mi"><div class="ml">Format</div><div class="mv">MC + Code Tracing</div></div>
+  <div class="mi"><div class="ml">Time</div><div class="mv">~15 minutes</div></div>
+  <div class="mi"><div class="ml">Questions</div><div class="mv">5–8 from bank of 10</div></div>
+</div>
+
+<div class="qc">
+  <div class="qch"><span class="qnum">Q01</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — list operations</span></div>
+  <div class="qcb">
+    <div class="qt">inventory = ["apples","bananas"]<br>inventory.append("oranges")<br>inventory.remove("bananas")<br>print(inventory)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>["apples","bananas","oranges"]</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>["apples","oranges"]</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>["bananas","oranges"]</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">Start: ["apples","bananas"]. append("oranges") → ["apples","bananas","oranges"]. remove("bananas") → ["apples","oranges"]. Verbatim Q1.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q02</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — dict access</span></div>
+  <div class="qcb">
+    <div class="qt">customer = {"name": "Alice", "age": 30}<br>print(customer["name"])</div>
+    <ul class="qopts"><li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">a</span>Alice</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>name</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>{"name":"Alice"}</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">customer["name"] accesses the value for key "name" → "Alice". Verbatim Q2 (Week 11).</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q03</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — csv module</span></div>
+  <div class="qcb">
+    <div class="qt">Which Python module reads and writes CSV files without installing anything?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>file</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>csv</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>pandas</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>io</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">The csv module is built into Python — no installation needed. pandas is a third-party library. Verbatim Q3 (Week 12).</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q04</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — tuple immutability</span></div>
+  <div class="qcb">
+    <div class="qt">What is the key difference between a list and a tuple?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>Tuples hold more items</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>Lists use {}; tuples use []</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>Tuples are immutable; lists are mutable</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Lists hold only strings</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">Tuples are immutable — once created, they cannot be modified. Lists are mutable — you can add, remove, or change items. Verbatim Q4.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q05</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — relative paths</span></div>
+  <div class="qcb">
+    <div class="qt">Why use relative file paths (data/sales.csv) instead of absolute paths (/Users/john/Desktop/data/sales.csv)?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>Shorter to type</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>Work on any machine regardless of where the project is stored</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>Run faster</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Required by the csv module</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">Relative paths work on any machine. Absolute paths break when the project moves to a different computer or when another person clones the repo. Verbatim Q5.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q06</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — dict .get()</span></div>
+  <div class="qcb">
+    <div class="qt">customer = {"name": "Alice", "age": 30}<br>print(customer.get("email", "Not found"))</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>None</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>Error</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>"Not found"</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>"email"</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">.get(key, default) returns the value if the key exists, or the default if it does not. "email" is not in the dict → returns "Not found". Verbatim Q6.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q07</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — dict iteration</span></div>
+  <div class="qcb">
+    <div class="qt">inventory = {"apples": 10, "bananas": 5}<br>for item in inventory:<br>    print(item)</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>10 5</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">b</span>apples bananas</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">c</span>{"apples":10}</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">Iterating a dict returns its KEYS, not values. To get values: for v in inventory.values(). To get both: for k,v in inventory.items(). Verbatim Q7.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q08</span><span class="qtag" style="background:#e2e8f0;color:#334155">Code Trace — list len</span></div>
+  <div class="qcb">
+    <div class="qt">coords = (40.7128, -74.0060)<br>print(len(coords))</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>1</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>3</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>2</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>Error</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">The tuple has 2 elements: 40.7128 and -74.0060. len() returns 2. Verbatim Q8.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q09</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — dict method</span></div>
+  <div class="qcb">
+    <div class="qt">Which dict method returns all key-value pairs as tuples?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>.keys()</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>.values()</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>.items()</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>.pairs()</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">.items() returns a view of (key, value) tuples — used in for k,v in d.items() loops. .pairs() does not exist. Verbatim Q9.</p>
+    </div>
+  </div>
+</div>
+<div class="qc">
+  <div class="qch"><span class="qnum">Q10</span><span class="qtag" style="background:#e2e8f0;color:#334155">MC — csv DictReader</span></div>
+  <div class="qcb">
+    <div class="qt">When using csv.DictReader to read a CSV, what type is each row?</div>
+    <ul class="qopts"><li class="" style=""><span class="ol-wrap ol-d" style="">a</span>A list</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">b</span>A tuple</li>
+<li class="correct" style="background:#f0fdf4;border-color:#86efac;color:#166534"><span class="ol-wrap ol-c" style="background:' + pnum + ';color:#fff">c</span>A dict</li>
+<li class="" style=""><span class="ol-wrap ol-d" style="">d</span>A string</li></ul>
+    <div class="expl" style="background:#f0fdf4;border-color:#a78bfa">
+      <div class="el" style="color:#3b0764">Explanation</div>
+      <p style="color:#3b0764">DictReader reads each row as a dict where keys are the header column names. This is why you write row["price"] instead of row[2].</p>
+    </div>
+  </div>
+</div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:20px;margin-top:20px">
+  <h2 style="font-size:14px;font-weight:700;color:#1e293b;margin-bottom:14px">Quick Reference Answer Key</h2>
+  <table class="tbl">
+    <thead><tr><th style="background:#7c3aed;color:#fff">Q</th><th style="background:#7c3aed;color:#fff">Answer</th><th style="background:#7c3aed;color:#fff">Topic</th></tr></thead>
+    <tbody><tr><td>Q01</td><td style='text-align:center;font-weight:700;color:#7c3aed'>B</td><td>list operations</td></tr>
+<tr><td>Q02</td><td style='text-align:center;font-weight:700;color:#7c3aed'>A</td><td>dict access</td></tr>
+<tr><td>Q03</td><td style='text-align:center;font-weight:700;color:#7c3aed'>B</td><td>csv module</td></tr>
+<tr><td>Q04</td><td style='text-align:center;font-weight:700;color:#7c3aed'>C</td><td>tuple immutability</td></tr>
+<tr><td>Q05</td><td style='text-align:center;font-weight:700;color:#7c3aed'>B</td><td>relative paths</td></tr>
+<tr><td>Q06</td><td style='text-align:center;font-weight:700;color:#7c3aed'>C</td><td>dict .get()</td></tr>
+<tr><td>Q07</td><td style='text-align:center;font-weight:700;color:#7c3aed'>B</td><td>dict iteration</td></tr>
+<tr><td>Q08</td><td style='text-align:center;font-weight:700;color:#7c3aed'>C</td><td>list len</td></tr>
+<tr><td>Q09</td><td style='text-align:center;font-weight:700;color:#7c3aed'>C</td><td>dict method</td></tr>
+<tr><td>Q10</td><td style='text-align:center;font-weight:700;color:#7c3aed'>C</td><td>csv DictReader</td></tr></tbody>
+  </table>
+</div>
+<div class="pf">ISM2411 · 6-Week Accelerated · Week 3 Quiz Study Guide · USF Muma College of Business</div>
+</div></body></html>

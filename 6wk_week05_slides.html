@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISM2411 6-Week Week 5</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0208;--card:#1a0410;--bord:#2e081c;--text:#f0eaf8;--dim:#5a1030;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --p:#f472b6;--s:#34d399;--i:#22d3ee;--b:#fbbf24;--f:#a78bfa;--out:#fce7f3;--w:#f87171;}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--p);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--p);}.reveal .controls{color:var(--p);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-p{border-left:3px solid var(--p);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid var(--w);}
+.py{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.65em;line-height:1.85;margin:10px 0;}
+.kw{color:var(--i);}.kw2{color:var(--s);}.ss{color:#fda4af;}.nn{color:#60a5fa;}
+.vv{color:var(--p);}.cm{color:rgba(255,255,255,.12);font-style:italic;}.ok{color:var(--out);}.err{color:var(--w);}
+.mt{color:var(--f);}.mo{color:var(--b);}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-p{background:rgba(255,255,255,.05);border-left:3px solid var(--p);}.box-p .bb strong{color:var(--p);}
+.box-s{background:rgba(255,255,255,.05);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(255,255,255,.05);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid var(--w);}.box-w .bb strong{color:var(--w);}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated 6-Week Week 5 of 6</span>
+  <h2>Data Cleaning &amp; Visualization</h2>
+  <h3>Cleaning Pipeline, matplotlib, Seaborn, Chart Selection, Capstone Prep</h3>
+  <div style="margin-top:1em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag" style="color:var(--p)">plt.bar plt.plot plt.hist</span>
+    <span class="tag" style="color:var(--s)">sns.barplot</span>
+    <span class="tag" style="color:var(--i)">Chart Selection</span>
+    <span class="tag" style="color:var(--b)">3 Capstone Charts</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">&#x1F4CA;</span>
+    <div class="bb"><strong>Final Content Week -- Covers 16-Week Weeks 14-15</strong>DC#3 due this week. DC#7 and DC#5 begin and close Week 6. Build your 3 Capstone charts this week.</div>
+  </div>
+  <span class="sn">1 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 1</span>
+  <h2>matplotlib -- Q2, Q3, Q6</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="kw">import</span> <span class="mo">matplotlib.pyplot</span> <span class="kw">as</span> <span class="mo">plt</span>
+<span class="cm"># Q2: plt.bar() = bar chart for CATEGORIES</span>
+<span class="vv">totals</span> = <span class="vv">df</span>.<span class="mt">groupby</span>(<span class="ss">"region"</span>)[<span class="ss">"revenue"</span>].<span class="mt">sum</span>()
+<span class="mo">plt</span>.<span class="mt">bar</span>(<span class="vv">totals</span>.<span class="mt">index</span>, <span class="vv">totals</span>.<span class="mt">values</span>)
+<span class="mo">plt</span>.<span class="mt">title</span>(<span class="ss">"Total Revenue by Region"</span>)
+<span class="mo">plt</span>.<span class="mt">xlabel</span>(<span class="ss">"Region"</span>)
+<span class="mo">plt</span>.<span class="mt">ylabel</span>(<span class="ss">"Revenue ($)"</span>)
+<span class="mo">plt</span>.<span class="mt">savefig</span>(<span class="ss">"charts/revenue_by_region.png"</span>,
+    <span class="vv">dpi</span>=<span class="nn">150</span>, <span class="vv">bbox_inches</span>=<span class="ss">"tight"</span>)
+<span class="mo">plt</span>.<span class="mt">show</span>()
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Q3: plt.plot() = line for TIME TREND</span>
+<span class="mo">plt</span>.<span class="mt">plot</span>(<span class="vv">monthly</span>.<span class="mt">index</span>, <span class="vv">monthly</span>.<span class="mt">values</span>, <span class="vv">marker</span>=<span class="ss">"o"</span>)
+<span class="mo">plt</span>.<span class="mt">xticks</span>(<span class="vv">rotation</span>=<span class="nn">45</span>)
+<span class="mo">plt</span>.<span class="mt">show</span>()
+<span class="cm"># Q6: plt.hist() = DISTRIBUTION</span>
+<span class="mo">plt</span>.<span class="mt">hist</span>(<span class="vv">df</span>[<span class="ss">"revenue"</span>], <span class="vv">bins</span>=<span class="nn">30</span>)
+<span class="mo">plt</span>.<span class="mt">title</span>(<span class="ss">"Revenue Distribution"</span>)
+<span class="mo">plt</span>.<span class="mt">show</span>()
+<span class="cm"># plt.line() does NOT exist</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">2 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 2</span>
+  <h2>Seaborn -- Q4, Q5</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-p"><span class="bi">&#x2B50;</span>
+      <div class="bb"><strong>Q4 + Q5 Verbatim</strong>Q4: Seaborn built on matplotlib (not pandas/NumPy). Q5: sns.barplot = mean per group + confidence intervals automatically.</div></div>
+      <div class="py">
+<span class="kw">import</span> <span class="mo">seaborn</span> <span class="kw">as</span> <span class="mo">sns</span>
+<span class="cm"># Q5: mean + CI auto-added</span>
+<span class="mo">sns</span>.<span class="mt">barplot</span>(<span class="vv">data</span>=<span class="vv">df</span>, <span class="vv">x</span>=<span class="ss">"region"</span>, <span class="vv">y</span>=<span class="ss">"revenue"</span>)
+<span class="mo">plt</span>.<span class="mt">title</span>(<span class="ss">"Avg Revenue by Region"</span>)
+<span class="mo">plt</span>.<span class="mt">show</span>()
+      </div>
+    </div>
+    <div>
+      <div class="card c-p" style="margin-bottom:10px"><div class="ct" style="color:var(--p)">Chart Selection</div><div class="cb">Bar = categories. Line = time trend. Histogram = continuous distribution. Know for quiz and Capstone rubric.</div></div>
+      <div class="card c-s"><div class="ct" style="color:var(--s)">plt.bar() vs sns.barplot()</div><div class="cb">plt.bar() shows exact values you pass in. sns.barplot() computes mean automatically and adds confidence interval error bars.</div></div>
+    </div>
+  </div>
+  <span class="sn">3 / 12</span>
+</section>
+<section>
+  <span class="lbl">Quiz Preview</span>
+  <h2>Week 5 Quiz -- 6 Key Questions</h2>
+  <div style="margin-top:14px">
+    <div class="qbox"><div class="qq">Q1 -- groupby("region")["sales"].sum() returns?</div><div class="qa">b) Total sales for each region</div></div>
+    <div class="qbox"><div class="qq">Q2 -- Which creates a bar chart? a)plt.line() b)plt.bar() c)plt.scatter() d)plt.hist()</div><div class="qa">b) plt.bar() -- plt.line() does NOT exist</div></div>
+    <div class="qbox"><div class="qq">Q3 -- When is a line chart best?</div><div class="qa">c) Showing a trend over time</div></div>
+    <div class="qbox"><div class="qq">Q4 -- Seaborn built on? a)pandas b)NumPy c)matplotlib d)scikit-learn</div><div class="qa">c) matplotlib</div></div>
+    <div class="qbox"><div class="qq">Q5 -- sns.barplot(data=df, x="region", y="revenue") produces?</div><div class="qa">c) Bar chart showing AVERAGE revenue per region WITH confidence intervals</div></div>
+    <div class="qbox"><div class="qq">Q6 -- Best chart for distribution of continuous variable? a)Bar b)Line c)Pie d)Histogram</div><div class="qa">d) Histogram</div></div>
+  </div>
+  <span class="sn">4 / 12</span>
+</section>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});</script>
+</body></html>

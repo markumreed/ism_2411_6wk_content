@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISM2411 6-Week Week 4</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020614;--card:#070e30;--bord:#0e1a50;--text:#f0eaf8;--dim:#1a2870;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --p:#818cf8;--s:#34d399;--i:#22d3ee;--b:#fbbf24;--f:#f472b6;--out:#e0e7ff;--w:#f87171;}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--p);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--p);}.reveal .controls{color:var(--p);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-p{border-left:3px solid var(--p);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid var(--w);}
+.py{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.65em;line-height:1.85;margin:10px 0;}
+.kw{color:var(--i);}.kw2{color:var(--s);}.ss{color:#fda4af;}.nn{color:#60a5fa;}
+.vv{color:var(--p);}.cm{color:rgba(255,255,255,.12);font-style:italic;}.ok{color:var(--out);}.err{color:var(--w);}
+.mt{color:var(--f);}.mo{color:var(--b);}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-p{background:rgba(255,255,255,.05);border-left:3px solid var(--p);}.box-p .bb strong{color:var(--p);}
+.box-s{background:rgba(255,255,255,.05);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(255,255,255,.05);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid var(--w);}.box-w .bb strong{color:var(--w);}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated 6-Week Week 4 of 6</span>
+  <h2>Intro to pandas</h2>
+  <h3>DataFrames, Loading, Filtering, GroupBy, Cleaning</h3>
+  <div style="margin-top:1em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag" style="color:var(--p)">DataFrame</span>
+    <span class="tag" style="color:var(--s)">read_csv filter sort</span>
+    <span class="tag" style="color:var(--i)">groupby</span>
+    <span class="tag" style="color:var(--b)">isnull fillna dropna</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">&#x1F43C;</span>
+    <div class="bb"><strong>Covers 16-Week Weeks 13-14</strong>DataCamp #3 begins today. pandas wraps the dict/loop patterns from Week 3 into one fast, readable line.</div>
+  </div>
+  <span class="sn">1 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 1</span>
+  <h2>Core pandas -- Q1, Q2, Q3, Q5</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="kw">import</span> <span class="mo">pandas</span> <span class="kw">as</span> <span class="mo">pd</span>
+<span class="cm"># Q3: pd.read_csv -- not pd.load_csv!</span>
+<span class="vv">df</span> = <span class="mo">pd</span>.<span class="mt">read_csv</span>(<span class="ss">"data/retail_sales.csv"</span>)
+<span class="cm"># Q2: head() = first 5 rows</span>
+<span class="vv">df</span>.<span class="mt">head</span>()
+<span class="cm"># Q5: describe() = count/mean/std/min/max</span>
+<span class="vv">df</span>.<span class="mt">describe</span>()
+<span class="cm"># Q1: (1.5+12.0)/2 = 6.75</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Q4: boolean filter</span>
+<span class="vv">df2</span> = <span class="mo">pd</span>.<span class="mt">DataFrame</span>({
+    <span class="ss">'name'</span>:[<span class="ss">'Alice'</span>,<span class="ss">'Bob'</span>,<span class="ss">'Carol'</span>],
+    <span class="ss">'score'</span>:[<span class="nn">85</span>,<span class="nn">72</span>,<span class="nn">91</span>]
+})
+<span class="vv">result</span> = <span class="vv">df2</span>[<span class="vv">df2</span>[<span class="ss">'score'</span>] &gt; <span class="nn">80</span>]
+<span class="kw2">print</span>(<span class="vv">result</span>[<span class="ss">'name'</span>].<span class="mt">values</span>)
+<span class="ok">['Alice' 'Carol']</span>
+<span class="cm"># Q7: groupby mean</span>
+<span class="cm"># HR:[60k,65k] = 62500, IT:[90k,95k] = 92500</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">2 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 2</span>
+  <h2>Cleaning -- Q6, Q8, Q10</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Q8: isnull().sum() = nulls per column</span>
+<span class="vv">df</span>.<span class="mt">isnull</span>().<span class="mt">sum</span>()
+<span class="cm"># Q6: fillna() fills NaN</span>
+<span class="vv">df</span>[<span class="ss">"price"</span>] = <span class="vv">df</span>[<span class="ss">"price"</span>].<span class="mt">fillna</span>(
+    <span class="vv">df</span>[<span class="ss">"price"</span>].<span class="mt">mean</span>())
+<span class="cm"># Q10: dropna() removes rows</span>
+<span class="vv">df</span> = <span class="vv">df</span>.<span class="mt">dropna</span>(<span class="vv">subset</span>=[<span class="ss">"price"</span>,<span class="ss">"qty"</span>])
+<span class="vv">df</span>.<span class="mt">to_csv</span>(<span class="ss">"data/clean.csv"</span>, <span class="vv">index</span>=<span class="kw">False</span>)
+      </div>
+    </div>
+    <div>
+      <div class="box box-p"><span class="bi">&#x1F4A1;</span><div class="bb"><strong>Drop vs Fill</strong>DROP when required (price/qty). FILL when optional (category="Other").</div></div>
+      <div class="box box-s" style="margin-top:10px"><span class="bi">&#x26A0;</span><div class="bb"><strong>Always Assign</strong>fillna() returns new object. df["col"] = df["col"].fillna(value). Forgetting assignment is the #1 bug.</div></div>
+    </div>
+  </div>
+  <span class="sn">3 / 12</span>
+</section>
+<section>
+  <span class="lbl">Quiz Preview</span>
+  <h2>Week 4 Quiz -- 8 Key Questions</h2>
+  <div style="margin-top:14px">
+    <div class="qbox"><div class="qq">Q1 -- df["price"].mean() for price=[1.5,12.0]</div><div class="qa">6.75 -- (1.5+12.0)/2</div></div>
+    <div class="qbox"><div class="qq">Q2 -- What does df.head() return?</div><div class="qa">c) First 5 rows</div></div>
+    <div class="qbox"><div class="qq">Q3 -- Which loads CSV into DataFrame?</div><div class="qa">c) pd.read_csv()</div></div>
+    <div class="qbox"><div class="qq">Q4 -- Filter score&gt;80 from [Alice=85,Bob=72,Carol=91]</div><div class="qa">['Alice' 'Carol']</div></div>
+    <div class="qbox"><div class="qq">Q5 -- What does describe() return?</div><div class="qa">c) Summary stats: count, mean, std, min, max</div></div>
+    <div class="qbox"><div class="qq">Q6 -- Which fills missing values?</div><div class="qa">c) df.fillna()</div></div>
+    <div class="qbox"><div class="qq">Q7 -- groupby("dept")["salary"].mean() HR=[60k,65k] IT=[90k,95k]</div><div class="qa">HR: 62500.0, IT: 92500.0</div></div>
+    <div class="qbox"><div class="qq">Q8 -- Which shows nulls per column?</div><div class="qa">b) df.isnull().sum()</div></div>
+  </div>
+  <span class="sn">4 / 12</span>
+</section>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});</script>
+</body></html>

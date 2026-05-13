@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8"><title>ISM2411 6-Week W3 Lecture Notes</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Lato',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;background:#f7f8fc}
+.pw{max-width:860px;margin:0 auto;padding:32px 24px 64px}
+.banner{border-radius:10px;padding:26px 32px;margin-bottom:24px;color:#fff}
+.sec{background:#fff;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:20px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #f1f5f9}
+.si{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.sh h2{font-size:15px;font-weight:700;color:#1e293b;margin:0}.sh .ti{font-size:11px;color:#94a3b8;margin-top:1px}
+.sb{padding:20px}
+.py{background:#020c14;color:#e8f4ff;font-family:'Courier New',monospace;font-size:12.5px;line-height:1.8;padding:14px 18px;border-radius:8px;margin:10px 0}
+.cal{border-radius:8px;padding:14px 16px;margin:12px 0;font-size:13px;line-height:1.6;display:flex;gap:12px}
+.ci{font-size:18px;flex-shrink:0}.cb strong{display:block;font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:3px}
+.sched{width:100%;border-collapse:collapse;font-size:13px}
+.sched td{padding:9px 14px;border-bottom:1px solid #f1f5f9;vertical-align:top}
+.sched td:first-child{width:120px;font-family:'Courier New',monospace;font-size:12px;font-weight:600;color:#64748b;white-space:nowrap}
+.sched tr:nth-child(odd) td{background:#f8fafc}
+p{font-size:14px;color:#334155;line-height:1.7;margin-bottom:10px}
+h3{font-size:14px;font-weight:700;color:#1e293b;margin:16px 0 8px}
+ul{padding-left:20px;margin-bottom:10px}
+li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
+.pf{text-align:center;font-size:11px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0}
+.banner{background:#08020c;}
+.cal-v{background:#f0fdfe;border-left:3px solid #a78bfa}.cal-v .cb strong{color:#164e63}
+</style></head>
+<body><div class="pw">
+<div class="banner">
+  <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#a78bfa;margin-bottom:6px;font-weight:600">ISM2411 6-Week Accelerated USF Muma College of Business</div>
+  <h1 style="font-size:21px;font-weight:700;margin-bottom:4px">Week 3 Lecture Notes -- Data Structures, Files & GitHub</h1>
+  <div style="font-size:13px;color:rgba(255,255,255,.8)">Covers 16-Wk Weeks 8,10-12</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px">
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px">
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#94a3b8;margin-bottom:3px">DataCamp</div>
+    <div style="font-size:13px;font-weight:600;color:#1e293b">DC#8 + DC#9 (Git/GitHub) DUE</div>
+  </div>
+  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px">
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:#94a3b8;margin-bottom:3px">Quiz Key</div>
+    <div style="font-size:13px;font-weight:600;color:#1e293b">Q1:list ops Q2:dict access Q3:csv Q4:tuple Q5:paths Q6:get()</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
+    <div><h2>Lists & Tuples</h2><div class="ti">~20 min</div></div></div>
+  <div class="sb"><p>Q1: inventory append/remove trace live. Q4: tuples are immutable — try modifying, show TypeError.</p></div>
+</div>
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
+    <div><h2>Dictionaries</h2><div class="ti">~20 min</div></div></div>
+  <div class="sb"><p>Q2: customer["name"] = "Alice". Q6: .get("phone","Not found") when key missing → Not found. Q7: iterating dict returns keys (not values).</p></div>
+</div>
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
+    <div><h2>CSV Files & GitHub</h2><div class="ti">~25 min</div></div></div>
+  <div class="sb"><p>Q3: csv module, not pandas. Q5: relative paths work anywhere. First GitHub push — walk through git init/add/commit/push together. Midterm end of week: 30 min, closed notes, all Q1-Q3 verbatim answers fair game.</p></div>
+</div>
+<div class="sec">
+  <div class="sh"><div class="si" style="background:#fef9c3">&#x1F550;</div><div><h2>Suggested Class Schedule (75 min)</h2></div></div>
+  <div class="sb">
+    <table class="sched">
+      <tbody>
+        <tr><td>0:00-0:05</td><td>Recap previous week, DataCamp check-in, set today's pace.</td></tr>
+        <tr><td>0:05-0:25</td><td>Lists & Tuples: Q1: inventory append/remove trace live. Q4: tuples are immutable — try modifying...</td></tr>
+        <tr><td>0:25-0:50</td><td>Dictionaries: Q2: customer["name"] = "Alice". Q6: .get("phone","Not found") when key missing →...</td></tr>
+        <tr><td>0:50-1:10</td><td>CSV Files & GitHub: Q3: csv module, not pandas. Q5: relative paths work anywhere. First GitHub push ...</td></tr>
+        <tr><td>1:10-1:15</td><td>Quiz preview, assignment intro, office hours reminder.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="pf">ISM2411 6-Week Accelerated Week 3 Lecture Notes USF Muma College of Business</div>
+</div></body></html>

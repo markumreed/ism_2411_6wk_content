@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="ISM2411_6WK_W01_QUIZ" title="ISM2411 6-Week Week 1 Quiz — Python Foundations">
+    <qtimetadata>
+      <qtimetadatafield><fieldlabel>cc_maxattempts</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+    </qtimetadata>
+    <section ident="ISM2411_6WK_W01_SEC" title="Week 1 — Python Foundations">
+
+      <item ident="W01_Q01" title="Q01 — type() check">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the output of: print(type(3.14))?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q01_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">int</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">str</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">float</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">bool</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q01_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q01_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q01_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q01_FB_C"><material><mattext texttype="text/html">✓ Correct! float — 3.14 has a decimal point so Python infers float type. Verbatim Q1.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q01_FB_W"><material><mattext texttype="text/html">✗ Incorrect. float — 3.14 has a decimal point so Python infers float type. Verbatim Q1.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q02" title="Q02 — f-string output">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the output?&lt;br&gt;name = "Taylor"  price = 9.99  print(f"{name} costs ${price}")&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q02_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Taylor costs $9.99</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">name costs $price</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Taylor costs 9.99</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q02_RL">A</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q02_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q02_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q02_FB_C"><material><mattext texttype="text/html">✓ Correct! f-strings substitute variable values. {name} → Taylor, {price} → 9.99. The $ is a literal character. Output: Taylor costs $9.99. Verbatim Q2.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q02_FB_W"><material><mattext texttype="text/html">✗ Incorrect. f-strings substitute variable values. {name} → Taylor, {price} → 9.99. The $ is a literal character. Output: Taylor costs $9.99. Verbatim Q2.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q03" title="Q03 — multiplication">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;price = 50  quantity = 3  revenue = price * quantity  print(revenue)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q03_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">500</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">53</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">150</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q03_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q03_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q03_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q03_FB_C"><material><mattext texttype="text/html">✓ Correct! 50 * 3 = 150. Verbatim Q3.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q03_FB_W"><material><mattext texttype="text/html">✗ Incorrect. 50 * 3 = 150. Verbatim Q3.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q04" title="Q04 — floor division">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the result of 17 // 5?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q04_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">3.4</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">2</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">3</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">4</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q04_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q04_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q04_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q04_FB_C"><material><mattext texttype="text/html">✓ Correct! // is integer (floor) division — drops the decimal. 17 ÷ 5 = 3 remainder 2. Result: 3. Verbatim Q4.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q04_FB_W"><material><mattext texttype="text/html">✗ Incorrect. // is integer (floor) division — drops the decimal. 17 ÷ 5 = 3 remainder 2. Result: 3. Verbatim Q4.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q05" title="Q05 — modulo">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the result of 17 % 5?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q05_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">3.4</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">2</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">3</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">4</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q05_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q05_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q05_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q05_FB_C"><material><mattext texttype="text/html">✓ Correct! % returns the remainder. 17 = 3×5 + 2. Remainder = 2. Verbatim Q5.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q05_FB_W"><material><mattext texttype="text/html">✗ Incorrect. % returns the remainder. 17 = 3×5 + 2. Remainder = 2. Verbatim Q5.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q06" title="Q06 — margin formula">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;cost = 40  price = 60  margin = (price - cost) / price  print(margin)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q06_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">0.25</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">0.5</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">0.333...</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">20</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q06_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q06_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q06_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q06_FB_C"><material><mattext texttype="text/html">✓ Correct! (60-40)/60 = 20/60 = 0.3333333... Python true division preserves the decimal. Verbatim Q6.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q06_FB_W"><material><mattext texttype="text/html">✗ Incorrect. (60-40)/60 = 20/60 = 0.3333333... Python true division preserves the decimal. Verbatim Q6.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q07" title="Q07 — bool type">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which of the following is a boolean value in Python?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q07_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">'True'</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">True</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">1.0</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">"false"</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q07_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q07_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q07_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q07_FB_C"><material><mattext texttype="text/html">✓ Correct! True (capital T, no quotes) is a bool. 'True' with quotes is a str. 1.0 is a float.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q07_FB_W"><material><mattext texttype="text/html">✗ Incorrect. True (capital T, no quotes) is a bool. 'True' with quotes is a str. 1.0 is a float.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q08" title="Q08 — reassignment">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;x = 5  x = x + 3  print(x)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q08_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">5</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">3</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">8</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q08_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q08_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q08_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q08_FB_C"><material><mattext texttype="text/html">✓ Correct! x starts at 5. x = x + 3 evaluates the right side first: 5 + 3 = 8. Then assigns 8 back to x. Output: 8.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q08_FB_W"><material><mattext texttype="text/html">✗ Incorrect. x starts at 5. x = x + 3 evaluates the right side first: 5 + 3 = 8. Then assigns 8 back to x. Output: 8.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q09" title="Q09 — int vs float">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What type does Python assign to the value 42?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q09_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">str</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">float</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">int</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">bool</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q09_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q09_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q09_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q09_FB_C"><material><mattext texttype="text/html">✓ Correct! 42 has no decimal point so Python infers int. 42.0 would be float.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q09_FB_W"><material><mattext texttype="text/html">✗ Incorrect. 42 has no decimal point so Python infers int. 42.0 would be float.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W01_Q10" title="Q10 — type conversion">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;price_str = "49.99"  revenue = float(price_str) * 3  print(revenue)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W01_Q10_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">TypeError</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">149.97</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">"49.99" * 3</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W01_Q10_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q10_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W01_Q10_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W01_Q10_FB_C"><material><mattext texttype="text/html">✓ Correct! float("49.99") converts the string to 49.99. 49.99 * 3 = 149.97. Without float(), multiplying a string by an int repeats it — which would raise a TypeError for non-integer multiplication.</mattext></material></itemfeedback>
+        <itemfeedback ident="W01_Q10_FB_W"><material><mattext texttype="text/html">✗ Incorrect. float("49.99") converts the string to 49.99. 49.99 * 3 = 149.97. Without float(), multiplying a string by an int repeats it — which would raise a TypeError for non-integer multiplication.</mattext></material></itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

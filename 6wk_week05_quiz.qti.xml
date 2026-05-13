@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="ISM2411_6WK_W05_QUIZ" title="ISM2411 6-Week Week 5 Quiz — Data Cleaning & Visualization">
+    <qtimetadata>
+      <qtimetadatafield><fieldlabel>cc_maxattempts</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+    </qtimetadata>
+    <section ident="ISM2411_6WK_W05_SEC" title="Week 5 — Data Cleaning & Visualization">
+
+      <item ident="W05_Q01" title="Q01 — groupby sum">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What does df.groupby("region")["sales"].sum() return?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q01_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Row count per region</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Total sales for each region</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Average sales per region</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">A list of region names</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q01_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q01_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q01_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q01_FB_C"><material><mattext texttype="text/html">✓ Correct! sum() = total. count() = row count. mean() = average. Verbatim Q1.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q01_FB_W"><material><mattext texttype="text/html">✗ Incorrect. sum() = total. count() = row count. mean() = average. Verbatim Q1.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q02" title="Q02 — plt.bar">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which matplotlib function creates a bar chart?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q02_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">plt.line()</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">plt.bar()</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">plt.scatter()</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">plt.hist()</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q02_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q02_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q02_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q02_FB_C"><material><mattext texttype="text/html">✓ Correct! plt.bar() = bar chart. plt.line() DOES NOT EXIST — use plt.plot() for lines. Verbatim Q2.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q02_FB_W"><material><mattext texttype="text/html">✗ Incorrect. plt.bar() = bar chart. plt.line() DOES NOT EXIST — use plt.plot() for lines. Verbatim Q2.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q03" title="Q03 — line chart use case">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;When is a line chart the best choice?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q03_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Comparing values across categories</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Showing the distribution of a variable</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Showing a trend over time</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Showing two unrelated variables</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q03_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q03_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q03_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q03_FB_C"><material><mattext texttype="text/html">✓ Correct! Line chart = trend over time. Comparing categories = bar chart. Distribution = histogram. Verbatim Q3.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q03_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Line chart = trend over time. Comparing categories = bar chart. Distribution = histogram. Verbatim Q3.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q04" title="Q04 — seaborn built on">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is Seaborn built on top of?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q04_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">pandas</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">NumPy</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">matplotlib</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">scikit-learn</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q04_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q04_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q04_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q04_FB_C"><material><mattext texttype="text/html">✓ Correct! Seaborn is built on matplotlib. After any sns. call, use plt. commands to refine. Verbatim Q4.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q04_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Seaborn is built on matplotlib. After any sns. call, use plt. commands to refine. Verbatim Q4.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q05" title="Q05 — sns.barplot output">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;import seaborn as sns&lt;br&gt;sns.barplot(data=df, x="region", y="revenue")&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q05_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">A scatter plot</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">A histogram by region</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">A bar chart showing average revenue per region with confidence intervals</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">A line chart</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q05_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q05_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q05_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q05_FB_C"><material><mattext texttype="text/html">✓ Correct! sns.barplot() shows the MEAN per group and automatically adds confidence interval error bars. Verbatim Q5.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q05_FB_W"><material><mattext texttype="text/html">✗ Incorrect. sns.barplot() shows the MEAN per group and automatically adds confidence interval error bars. Verbatim Q5.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q06" title="Q06 — histogram use case">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which chart type best shows the distribution of a continuous variable like salary?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q06_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Bar chart</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Line chart</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Pie chart</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Histogram</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q06_RL">D</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q06_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q06_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q06_FB_C"><material><mattext texttype="text/html">✓ Correct! Histogram = distribution of a continuous numeric variable. Verbatim Q6.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q06_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Histogram = distribution of a continuous numeric variable. Verbatim Q6.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q07" title="Q07 — plt.hist">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;import matplotlib.pyplot as plt&lt;br&gt;plt.hist(df["sales"], bins=10)&lt;br&gt;plt.title("Sales Distribution")&lt;br&gt;plt.show()&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q07_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">A bar chart of sales by category</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">A line chart</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">A histogram with 10 bins titled "Sales Distribution"</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">A scatter plot</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q07_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q07_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q07_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q07_FB_C"><material><mattext texttype="text/html">✓ Correct! plt.hist() = histogram. bins=10 = 10 buckets. plt.title() sets the title. Verbatim Q7.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q07_FB_W"><material><mattext texttype="text/html">✗ Incorrect. plt.hist() = histogram. bins=10 = 10 buckets. plt.title() sets the title. Verbatim Q7.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q08" title="Q08 — mean vs median">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;If df["revenue"].mean() = 1200 and df["revenue"].median() = 650, what does this suggest?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q08_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Data is symmetric</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Data is left-skewed</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Data is right-skewed — large transactions pull the mean up</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">There is an error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q08_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q08_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q08_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q08_FB_C"><material><mattext texttype="text/html">✓ Correct! Mean > median = right-skewed. A few very large transactions pull the mean upward. Median ($650) is more representative of a typical transaction.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q08_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Mean > median = right-skewed. A few very large transactions pull the mean upward. Median ($650) is more representative of a typical transaction.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q09" title="Q09 — savefig">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Why use index=False in df.to_csv("file.csv", index=False)?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q09_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Makes the file smaller</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Prevents writing the row index (0,1,2...) as an extra column</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Required — to_csv fails without it</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Skips rows with NaN</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q09_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q09_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q09_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q09_FB_C"><material><mattext texttype="text/html">✓ Correct! Without index=False, pandas writes the row numbers as "Unnamed: 0" in the output file. Always use index=False.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q09_FB_W"><material><mattext texttype="text/html">✗ Incorrect. Without index=False, pandas writes the row numbers as "Unnamed: 0" in the output file. Always use index=False.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W05_Q10" title="Q10 — str.title cleaning">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Why apply df["region"].str.title() before groupby("region")?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W05_Q10_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">groupby only works on title-case columns</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">It makes output look nicer</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">"north","North","NORTH" are treated as three separate groups without normalization</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">It converts strings to numbers</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W05_Q10_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q10_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W05_Q10_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W05_Q10_FB_C"><material><mattext texttype="text/html">✓ Correct! pandas groupby is case-sensitive. Normalizing with .str.title() ensures all regions merge into one group per region. This is one of the most common real-world data bugs.</mattext></material></itemfeedback>
+        <itemfeedback ident="W05_Q10_FB_W"><material><mattext texttype="text/html">✗ Incorrect. pandas groupby is case-sensitive. Normalizing with .str.title() ensures all regions merge into one group per region. This is one of the most common real-world data bugs.</mattext></material></itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

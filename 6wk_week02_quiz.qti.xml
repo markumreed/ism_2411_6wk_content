@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/xsd/ims_qtiasiv1p2p1.xsd">
+  <assessment ident="ISM2411_6WK_W02_QUIZ" title="ISM2411 6-Week Week 2 Quiz — Control Flow & Functions">
+    <qtimetadata>
+      <qtimetadatafield><fieldlabel>cc_maxattempts</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+    </qtimetadata>
+    <section ident="ISM2411_6WK_W02_SEC" title="Week 2 — Control Flow & Functions">
+
+      <item ident="W02_Q01" title="Q01 — if/elif/else">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;score = 85&lt;br&gt;if score >= 90:&lt;br&gt;    print("A")&lt;br&gt;elif score >= 80:&lt;br&gt;    print("B")&lt;br&gt;else:&lt;br&gt;    print("C")&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q01_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">A</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">B</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">C</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q01_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q01_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q01_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q01_FB_C"><material><mattext texttype="text/html">✓ Correct! 85 < 90 so first condition fails. 85 >= 80 is True so elif runs and prints "B". Verbatim Q1.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q01_FB_W"><material><mattext texttype="text/html">✗ Incorrect. 85 < 90 so first condition fails. 85 >= 80 is True so elif runs and prints "B". Verbatim Q1.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q02" title="Q02 — for loop sum">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;total = 0&lt;br&gt;for i in range(1, 6):&lt;br&gt;    total += i&lt;br&gt;print(total)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q02_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">6</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">10</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">15</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">21</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q02_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q02_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q02_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q02_FB_C"><material><mattext texttype="text/html">✓ Correct! range(1,6) = [1,2,3,4,5]. Sum = 1+2+3+4+5 = 15. Verbatim Q2.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q02_FB_W"><material><mattext texttype="text/html">✗ Incorrect. range(1,6) = [1,2,3,4,5]. Sum = 1+2+3+4+5 = 15. Verbatim Q2.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q03" title="Q03 — elif keyword">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;Which keyword introduces an alternative condition after if?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q03_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">else</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">then</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">elif</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">elseif</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q03_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q03_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q03_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q03_FB_C"><material><mattext texttype="text/html">✓ Correct! elif (else-if) introduces an additional condition. Python does not use "then" or "elseif". Verbatim Q3.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q03_FB_W"><material><mattext texttype="text/html">✗ Incorrect. elif (else-if) introduces an additional condition. Python does not use "then" or "elseif". Verbatim Q3.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q04" title="Q04 — function with return">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;def compute_tax(price, rate):&lt;br&gt;    return price * rate&lt;br&gt;result = compute_tax(100, 0.07)&lt;br&gt;print(result)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q04_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">7</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">107</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">0.07</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">7.0</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q04_RL">D</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q04_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q04_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q04_FB_C"><material><mattext texttype="text/html">✓ Correct! 100 * 0.07 = 7.0 (float because rate is float). The function returns 7.0.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q04_FB_W"><material><mattext texttype="text/html">✗ Incorrect. 100 * 0.07 = 7.0 (float because rate is float). The function returns 7.0.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q05" title="Q05 — break usage">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What does break do inside a loop?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q05_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Skips to the next iteration</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">Exits the loop immediately</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Restarts the loop from the beginning</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Pauses execution</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q05_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q05_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q05_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q05_FB_C"><material><mattext texttype="text/html">✓ Correct! break exits the loop immediately. continue skips to the next iteration. break is used to exit early when a condition is met.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q05_FB_W"><material><mattext texttype="text/html">✗ Incorrect. break exits the loop immediately. continue skips to the next iteration. break is used to exit early when a condition is met.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q06" title="Q06 — def greet">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;def greet(name):&lt;br&gt;    message = f"Hello, {name}!"&lt;br&gt;    return message&lt;br&gt;print(greet("Alice"))&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q06_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">Hello, name!</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">message</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">Hello, Alice!</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q06_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q06_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q06_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q06_FB_C"><material><mattext texttype="text/html">✓ Correct! greet("Alice") calls the function with name="Alice". f"Hello, {name}!" → "Hello, Alice!". The function returns it. print() displays it.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q06_FB_W"><material><mattext texttype="text/html">✗ Incorrect. greet("Alice") calls the function with name="Alice". f"Hello, {name}!" → "Hello, Alice!". The function returns it. print() displays it.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q07" title="Q07 — while loop">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;When does a while loop stop executing?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q07_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">After exactly 10 iterations</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">When its condition becomes False</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">When break is called</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Both b and c</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q07_RL">D</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q07_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q07_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q07_FB_C"><material><mattext texttype="text/html">✓ Correct! A while loop stops when its condition is False OR when break is explicitly called. Both are valid exit mechanisms.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q07_FB_W"><material><mattext texttype="text/html">✗ Incorrect. A while loop stops when its condition is False OR when break is explicitly called. Both are valid exit mechanisms.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q08" title="Q08 — conditional business">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;discount = 0&lt;br&gt;total = 120&lt;br&gt;if total > 100:&lt;br&gt;    discount = 10&lt;br&gt;print(discount)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q08_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">0</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">10</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">120</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q08_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q08_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q08_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q08_FB_C"><material><mattext texttype="text/html">✓ Correct! 120 > 100 is True, so discount = 10 executes. Output: 10. Verbatim (Week 2 Q3).</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q08_FB_W"><material><mattext texttype="text/html">✗ Incorrect. 120 > 100 is True, so discount = 10 executes. Output: 10. Verbatim (Week 2 Q3).</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q09" title="Q09 — return vs print">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;What is the difference between print() and return inside a function?&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q09_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">They are identical</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">print() shows output; return sends a value back to the caller</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">return shows output; print() sends a value back</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">return only works inside loops</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q09_RL">B</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q09_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q09_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q09_FB_C"><material><mattext texttype="text/html">✓ Correct! print() displays to the screen but the value is not usable by the calling code. return sends the value back so it can be stored, used in calculations, or passed to other functions.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q09_FB_W"><material><mattext texttype="text/html">✗ Incorrect. print() displays to the screen but the value is not usable by the calling code. return sends the value back so it can be stored, used in calculations, or passed to other functions.</mattext></material></itemfeedback>
+      </item>
+      <item ident="W02_Q10" title="Q10 — range">
+        <itemmetadata><qtimetadata>
+          <qtimetadatafield><fieldlabel>question_type</fieldlabel><fieldentry>multiple_choice_question</fieldentry></qtimetadatafield>
+          <qtimetadatafield><fieldlabel>points_possible</fieldlabel><fieldentry>1</fieldentry></qtimetadatafield>
+        </qtimetadata></itemmetadata>
+        <presentation><material><mattext texttype="text/html">&lt;p&gt;for i in range(3):&lt;br&gt;    print(i)&lt;/p&gt;</mattext></material>
+          <response_lid ident="W02_Q10_RL" rcardinality="Single"><render_choice>
+            <response_label ident="a"><material><mattext texttype="text/plain">1 2 3</mattext></material></response_label>
+<response_label ident="b"><material><mattext texttype="text/plain">0 1 2 3</mattext></material></response_label>
+<response_label ident="c"><material><mattext texttype="text/plain">0 1 2</mattext></material></response_label>
+<response_label ident="d"><material><mattext texttype="text/plain">Error</mattext></material></response_label>
+          </render_choice></response_lid>
+        </presentation>
+        <resprocessing><outcomes><decvar maxvalue="1" minvalue="0" varname="SCORE" vartype="Decimal"/></outcomes>
+          <respcondition continue="No"><conditionvar><varequal respident="W02_Q10_RL">C</varequal></conditionvar>
+            <setvar action="Set" varname="SCORE">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q10_FB_C"/>
+          </respcondition>
+          <respcondition continue="No"><conditionvar><other/></conditionvar>
+            <setvar action="Set" varname="SCORE">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="W02_Q10_FB_W"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="W02_Q10_FB_C"><material><mattext texttype="text/html">✓ Correct! range(3) = [0, 1, 2]. range(n) starts at 0 and goes up to (not including) n. Prints: 0, 1, 2 on separate lines.</mattext></material></itemfeedback>
+        <itemfeedback ident="W02_Q10_FB_W"><material><mattext texttype="text/html">✗ Incorrect. range(3) = [0, 1, 2]. range(n) starts at 0 and goes up to (not including) n. Prints: 0, 1, 2 on separate lines.</mattext></material></itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

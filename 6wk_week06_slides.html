@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISM2411 6-Week Week 6</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08060a;--card:#100d14;--bord:#1e182a;--text:#f0eaf8;--dim:#3a2a50;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --p:#fbbf24;--s:#34d399;--i:#22d3ee;--b:#a78bfa;--f:#f472b6;--out:#fef9c3;--w:#f87171;}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--p);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--p);}.reveal .controls{color:var(--p);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-p{border-left:3px solid var(--p);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid var(--w);}
+.py{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.65em;line-height:1.85;margin:10px 0;}
+.kw{color:var(--i);}.kw2{color:var(--s);}.ss{color:#fda4af;}.nn{color:#60a5fa;}
+.vv{color:var(--p);}.cm{color:rgba(255,255,255,.12);font-style:italic;}.ok{color:var(--out);}.err{color:var(--w);}
+.mt{color:var(--f);}.mo{color:var(--b);}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-p{background:rgba(255,255,255,.05);border-left:3px solid var(--p);}.box-p .bb strong{color:var(--p);}
+.box-s{background:rgba(255,255,255,.05);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(255,255,255,.05);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid var(--w);}.box-w .bb strong{color:var(--w);}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated 6-Week Week 6 of 6 Final</span>
+  <h2>Capstone Work Session &amp; Presentations</h2>
+  <h3>Five milestones, one GitHub repo, 5-7 minute presentation</h3>
+  <div style="margin-top:1em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag" style="color:var(--p)">Mon: Load</span>
+    <span class="tag" style="color:var(--s)">Tue: Clean</span>
+    <span class="tag" style="color:var(--i)">Wed: Analyze</span>
+    <span class="tag" style="color:var(--b)">Thu: Chart</span>
+    <span class="tag" style="color:var(--f)">Fri: Present</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">&#x1F3C1;</span>
+    <div class="bb"><strong>No New Content -- Pure Execution</strong>No quiz. DC#7 and DC#5 close end of this week. Load, clean, analyze, chart, present the retail sales dataset.</div>
+  </div>
+  <span class="sn">1 / 10</span>
+</section>
+<section>
+  <span class="lbl">Daily Milestones</span>
+  <h2>Five Days -- Five GitHub Pushes</h2>
+  <div style="margin-top:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+    <div class="card c-p"><div class="ct" style="color:var(--p);font-size:.65em">Monday</div><div class="cb">Load. head/info/describe/isnull. Markdown. Push.</div></div>
+    <div class="card c-s"><div class="ct" style="color:var(--s);font-size:.65em">Tuesday</div><div class="cb">Clean. dropna/fillna/normalize. Export CSV. Push.</div></div>
+    <div class="card c-i"><div class="ct" style="color:var(--i);font-size:.65em">Wednesday</div><div class="cb">Revenue. 3 business questions + groupby. Written findings. Push.</div></div>
+    <div class="card c-b"><div class="ct" style="color:var(--b);font-size:.65em">Thursday</div><div class="cb">3 charts: bar/line/histogram. Labels. savefig. Restart+Run All. Push.</div></div>
+    <div class="card c-f"><div class="ct" style="color:var(--f);font-size:.65em">Fri/Sat</div><div class="cb">5-7 min presentation. Slides + code walkthrough. Peer feedback.</div></div>
+  </div>
+  <div class="box box-b" style="margin-top:14px"><span class="bi">&#x1F511;</span><div class="bb"><strong>5 Separate Commits</strong>Instructor reviews commit history. One Friday commit is not daily work.</div></div>
+  <span class="sn">2 / 10</span>
+</section>
+<section>
+  <span class="lbl">Rubric</span>
+  <h2>Four-Dimension Rubric -- 25% Each</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="card c-p" style="margin-bottom:10px"><div class="ct" style="color:var(--p)">Code Clarity (25%)</div><div class="cb">Notebook runs Restart+Run All without errors. Meaningful variable names. Markdown narrative throughout.</div></div>
+      <div class="card c-s"><div class="ct" style="color:var(--s)">Visualization Quality (25%)</div><div class="cb">All 3 charts. Every chart: title, x-label, y-label. Saved to charts/. Correct chart type for each question.</div></div>
+    </div>
+    <div>
+      <div class="card c-i" style="margin-bottom:10px"><div class="ct" style="color:var(--i)">Business Insight Quality (25%)</div><div class="cb">Specific numbers ("North: $31,200 -- 26% ahead"). Written interpretation. One concrete recommendation.</div></div>
+      <div class="card c-b"><div class="ct" style="color:var(--b)">Communication / Slides (25%)</div><div class="cb">5-7 minutes. Dataset, cleaning, 3 findings, recommendation. Code walkthrough. Peer feedback submitted.</div></div>
+    </div>
+  </div>
+  <span class="sn">3 / 10</span>
+</section>
+<section>
+  <span class="lbl">Six Weeks</span>
+  <h2>One Complete Data Analysis Pipeline</h2>
+  <div style="margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+    <div class="card c-p"><div class="ct" style="color:var(--p)">Week 1</div><div class="cb">Variables, types, operators. Atoms of every program.</div></div>
+    <div class="card c-s"><div class="ct" style="color:var(--s)">Week 2</div><div class="cb">Control flow, functions, debugging. Algorithmic thinking.</div></div>
+    <div class="card c-i"><div class="ct" style="color:var(--i)">Week 3</div><div class="cb">Lists, dicts, CSV, GitHub. Structured data + version control.</div></div>
+    <div class="card c-b"><div class="ct" style="color:var(--b)">Week 4</div><div class="cb">pandas. Load, filter, groupby. Industry-standard analysis.</div></div>
+    <div class="card c-f"><div class="ct" style="color:var(--f)">Week 5</div><div class="cb">Clean + visualize. Three Capstone charts built.</div></div>
+    <div class="card c-p"><div class="ct" style="color:var(--p)">Week 6</div><div class="cb">Load, clean, analyze, chart, present. Full portfolio.</div></div>
+  </div>
+  <div class="box box-b" style="margin-top:12px"><span class="bi">&#x1F680;</span><div class="bb"><strong>Your GitHub is Your Portfolio</strong>Put the Capstone repo URL on your resume and LinkedIn today.</div></div>
+  <span class="sn">4 / 10</span>
+</section>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});</script>
+</body></html>

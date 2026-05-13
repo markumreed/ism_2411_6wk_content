@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ISM2411 6-Week Week 2</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020c08;--card:#071a0e;--bord:#0e2e18;--text:#f0eaf8;--dim:#1a5a30;
+  --mono:'Space Mono',monospace;--sans:'Syne',sans-serif;
+  --p:#34d399;--s:#22d3ee;--i:#a78bfa;--b:#fbbf24;--f:#f472b6;--out:#d1fae5;--w:#f87171;}
+.reveal{font-family:var(--sans);background:var(--bg);color:var(--text);}
+.reveal h1,.reveal h2,.reveal h3{font-family:var(--sans);text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;}
+.reveal h1{font-size:2.4em;line-height:1.1;}.reveal h2{font-size:1.65em;}
+.reveal h3{font-size:1em;color:var(--dim);font-weight:400;margin-top:-.3em;}
+.reveal section{text-align:left;padding:0 56px;}
+.reveal code{font-family:var(--mono);font-size:.88em;color:var(--p);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:3px;}
+.reveal .progress{color:var(--p);}.reveal .controls{color:var(--p);}
+.lbl{font-family:var(--mono);font-size:.27em;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.6em;}
+.sn{position:absolute;bottom:16px;right:24px;font-family:var(--mono);font-size:.26em;color:var(--bord);}
+.tag{display:inline-block;font-family:var(--mono);font-size:.26em;padding:3px 9px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:8px;padding:14px 16px;}
+.card .ct{font-family:var(--mono);font-size:.75em;font-weight:700;margin-bottom:5px;}
+.card .cb{font-size:.52em;color:var(--dim);line-height:1.6;}
+.c-p{border-left:3px solid var(--p);}.c-s{border-left:3px solid var(--s);}
+.c-i{border-left:3px solid var(--i);}.c-b{border-left:3px solid var(--b);}
+.c-f{border-left:3px solid var(--f);}.c-w{border-left:3px solid var(--w);}
+.py{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:.65em;line-height:1.85;margin:10px 0;}
+.kw{color:var(--i);}.kw2{color:var(--s);}.ss{color:#fda4af;}.nn{color:#60a5fa;}
+.vv{color:var(--p);}.cm{color:rgba(255,255,255,.12);font-style:italic;}.ok{color:var(--out);}.err{color:var(--w);}
+.mt{color:var(--f);}.mo{color:var(--b);}
+.box{border-radius:8px;padding:13px 16px;margin:10px 0;font-size:.57em;line-height:1.7;display:flex;gap:11px;align-items:flex-start;}
+.bi{font-size:1.2em;flex-shrink:0;margin-top:1px;}.bb{flex:1}
+.bb strong{font-family:var(--mono);font-size:.9em;font-weight:700;display:block;margin-bottom:3px;letter-spacing:.05em;text-transform:uppercase;}
+.box-p{background:rgba(255,255,255,.05);border-left:3px solid var(--p);}.box-p .bb strong{color:var(--p);}
+.box-s{background:rgba(255,255,255,.05);border-left:3px solid var(--s);}.box-s .bb strong{color:var(--s);}
+.box-b{background:rgba(255,255,255,.05);border-left:3px solid var(--b);}.box-b .bb strong{color:var(--b);}
+.box-w{background:rgba(248,113,113,.08);border-left:3px solid var(--w);}.box-w .bb strong{color:var(--w);}
+.qbox{background:var(--card);border:1px solid var(--bord);border-radius:7px;padding:11px 14px;margin:6px 0;font-size:.53em;}
+.qbox .qq{font-weight:700;color:var(--text);margin-bottom:4px;}
+.qbox .qo{color:var(--dim);}.qbox .qa{color:var(--out);font-family:var(--mono);margin-top:4px;}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <span class="lbl">ISM2411 Accelerated 6-Week Week 2 of 6</span>
+  <h2>Control Flow &amp; Functions</h2>
+  <h3>if/elif/else, for/while loops, def/return, Debugging, AI Literacy</h3>
+  <div style="margin-top:1em;display:flex;gap:8px;flex-wrap:wrap">
+    <span class="tag" style="color:var(--p)">Conditionals</span>
+    <span class="tag" style="color:var(--s)">Loops</span>
+    <span class="tag" style="color:var(--i)">Functions</span>
+    <span class="tag" style="color:var(--b)">Debugging</span>
+  </div>
+  <div class="box box-b" style="margin-top:14px">
+    <span class="bi">&#x26A1;</span>
+    <div class="bb"><strong>Covers 16-Week Weeks 5-7</strong>DataCamp #1 (Python Data Fundamentals) is DUE end of this week. Complete all modules -- loops and functions sections reinforce today exactly.</div>
+  </div>
+  <span class="sn">1 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 1</span>
+  <h2>if / elif / else -- Quiz Q1</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-p" style="margin-bottom:8px">
+        <span class="bi">&#x2B50;</span>
+        <div class="bb"><strong>Quiz Q1 Verbatim</strong>score=85. if score&gt;=90 "A" elif score&gt;=80 "B" else "C". Output: B. 85&lt;90 fails, 85&gt;=80 True.</div>
+      </div>
+      <div class="py">
+<span class="vv">score</span> = <span class="nn">85</span>
+<span class="kw">if</span> <span class="vv">score</span> &gt;= <span class="nn">90</span>:
+    <span class="kw2">print</span>(<span class="ss">"A"</span>)
+<span class="kw">elif</span> <span class="vv">score</span> &gt;= <span class="nn">80</span>:
+    <span class="kw2">print</span>(<span class="ss">"B"</span>)   <span class="cm"># this runs</span>
+<span class="kw">else</span>:
+    <span class="kw2">print</span>(<span class="ss">"C"</span>)
+<span class="ok">B</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Business: discount tiers</span>
+<span class="vv">order_value</span> = <span class="nn">250</span>
+<span class="kw">if</span> <span class="vv">order_value</span> &gt;= <span class="nn">500</span>:
+    <span class="vv">discount</span> = <span class="nn">0.20</span>
+<span class="kw">elif</span> <span class="vv">order_value</span> &gt;= <span class="nn">200</span>:
+    <span class="vv">discount</span> = <span class="nn">0.10</span>
+<span class="kw">else</span>:
+    <span class="vv">discount</span> = <span class="nn">0.00</span>
+<span class="kw2">print</span>(<span class="vv">discount</span>)
+<span class="ok">0.1</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">2 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 2</span>
+  <h2>for Loops -- Quiz Q2</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="box box-s" style="margin-bottom:8px">
+        <span class="bi">&#x2B50;</span>
+        <div class="bb"><strong>Q2 Verbatim</strong>total=0, for i in range(1,6): total+=i. range(1,6)=[1,2,3,4,5]. Sum=15.</div>
+      </div>
+      <div class="py">
+<span class="vv">total</span> = <span class="nn">0</span>
+<span class="kw">for</span> <span class="vv">i</span> <span class="kw">in</span> <span class="kw2">range</span>(<span class="nn">1</span>, <span class="nn">6</span>):
+    <span class="vv">total</span> += <span class="vv">i</span>
+<span class="kw2">print</span>(<span class="vv">total</span>)
+<span class="ok">15</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># range(3) = 0,1,2 (starts at 0)</span>
+<span class="cm"># break: exit loop immediately</span>
+<span class="cm"># continue: skip to next iteration</span>
+<span class="vv">prices</span> = [<span class="nn">12.99</span>, <span class="nn">49.99</span>, <span class="nn">5.99</span>]
+<span class="kw">for</span> <span class="vv">p</span> <span class="kw">in</span> <span class="vv">prices</span>:
+    <span class="kw">if</span> <span class="vv">p</span> &lt; <span class="nn">10</span>:
+        <span class="kw">continue</span>
+    <span class="kw2">print</span>(<span class="vv">p</span>)
+<span class="ok">12.99</span>
+<span class="ok">49.99</span>
+      </div>
+    </div>
+  </div>
+  <span class="sn">3 / 12</span>
+</section>
+<section>
+  <span class="lbl">Part 3</span>
+  <h2>Functions -- Q4, Q6</h2>
+  <div class="g2" style="margin-top:14px">
+    <div>
+      <div class="py">
+<span class="cm"># Q4: compute_tax(100, 0.07)</span>
+<span class="kw">def</span> <span class="vv">compute_tax</span>(<span class="vv">price</span>, <span class="vv">rate</span>):
+    <span class="kw">return</span> <span class="vv">price</span> * <span class="vv">rate</span>
+<span class="kw2">print</span>(<span class="vv">compute_tax</span>(<span class="nn">100</span>, <span class="nn">0.07</span>))
+<span class="ok">7.0</span>
+
+<span class="cm"># Q6: greet("Alice")</span>
+<span class="kw">def</span> <span class="vv">greet</span>(<span class="vv">name</span>):
+    <span class="kw">return</span> <span class="vv">f</span><span class="ss">"Hello, {name}!"</span>
+<span class="kw2">print</span>(<span class="vv">greet</span>(<span class="ss">"Alice"</span>))
+<span class="ok">Hello, Alice!</span>
+      </div>
+    </div>
+    <div>
+      <div class="py">
+<span class="cm"># Business function</span>
+<span class="kw">def</span> <span class="vv">classify_order</span>(<span class="vv">value</span>):
+    <span class="kw">if</span>   <span class="vv">value</span> &gt;= <span class="nn">500</span>: <span class="kw">return</span> <span class="ss">"Large"</span>
+    <span class="kw">elif</span> <span class="vv">value</span> &gt;= <span class="nn">100</span>: <span class="kw">return</span> <span class="ss">"Medium"</span>
+    <span class="kw">else</span>:               <span class="kw">return</span> <span class="ss">"Small"</span>
+
+<span class="kw2">print</span>(<span class="vv">classify_order</span>(<span class="nn">250</span>))  <span class="ok"># Medium</span>
+      </div>
+      <div class="box box-p" style="margin-top:10px">
+        <span class="bi">&#x1F50D;</span>
+        <div class="bb"><strong>Debug First, Then Ask</strong>Read error message. Try fix (5 min). Search it. THEN ask AI with the full error. Never paste code without trying first.</div>
+      </div>
+    </div>
+  </div>
+  <span class="sn">4 / 12</span>
+</section>
+<section>
+  <span class="lbl">Quiz Preview</span>
+  <h2>Week 2 Quiz -- 6 Key Questions</h2>
+  <div style="margin-top:14px">
+    <div class="qbox"><div class="qq">Q1 -- score=85, if&gt;=90:"A" elif&gt;=80:"B" else:"C"</div><div class="qa">B -- 85&lt;90 fails, 85&gt;=80 True</div></div>
+    <div class="qbox"><div class="qq">Q2 -- total=0, for i in range(1,6): total+=i, print(total)</div><div class="qa">15 -- 1+2+3+4+5=15</div></div>
+    <div class="qbox"><div class="qq">Q3 -- Which keyword introduces alternative condition after if? a)else b)then c)elif d)elseif</div><div class="qa">c) elif</div></div>
+    <div class="qbox"><div class="qq">Q4 -- compute_tax(100, 0.07) where return price*rate</div><div class="qa">7.0 -- 100 * 0.07 = 7.0 (float)</div></div>
+    <div class="qbox"><div class="qq">Q5 -- What does break do inside a loop?</div><div class="qa">b) Exits the loop immediately</div></div>
+    <div class="qbox"><div class="qq">Q6 -- greet("Alice") where return f"Hello, {name}!"</div><div class="qa">Hello, Alice!</div></div>
+  </div>
+  <span class="sn">5 / 12</span>
+</section>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,transition:'fade',transitionSpeed:'fast',controls:true,progress:true,center:false,width:1280,height:720,margin:0,minScale:0.2,maxScale:2.0});</script>
+</body></html>
