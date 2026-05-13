@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head><meta charset="UTF-8"><title>ISM2411 6-Week W2 Lecture Notes</title>
 <style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Lato',Arial,sans-serif;font-size:15px;line-height:1.7;color:#1a1a2e;background:#f7f8fc}
 .pw{max-width:860px;margin:0 auto;padding:32px 24px 64px}
@@ -20,13 +21,13 @@ h3{font-size:14px;font-weight:700;color:#1e293b;margin:16px 0 8px}
 ul{padding-left:20px;margin-bottom:10px}
 li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
 .pf{text-align:center;font-size:11px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0}
-.banner{background:#020c08;}
+.banner{background:linear-gradient(135deg,#020c08 0%,#064018 100%);}
 .cal-v{background:#f0fdfe;border-left:3px solid #34d399}.cal-v .cb strong{color:#164e63}
 </style></head>
-<body><div class="pw">
-<div class="banner">
+<body style='font-family:"Lato", Arial, sans-serif; font-size:15px; line-height:1.7; color:#1a1a2e; background:#f7f8fc'><div class="pw" style="max-width:860px; margin:0 auto; padding:32px 24px 64px">
+<div class="banner" style="border-radius:10px; padding:26px 32px; margin-bottom:24px; color:#fff; background:linear-gradient(135deg,#020c08 0%,#064018 100%)">
   <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#34d399;margin-bottom:6px;font-weight:600">ISM2411 6-Week Accelerated USF Muma College of Business</div>
-  <h1 style="font-size:21px;font-weight:700;margin-bottom:4px">Week 2 Lecture Notes -- Control Flow & Functions</h1>
+  <h1 style="font-size:21px;font-weight:700;margin-bottom:4px">Week 2 Lecture Notes -- Control Flow &amp; Functions</h1>
   <div style="font-size:13px;color:rgba(255,255,255,.8)">Covers 16-Wk Weeks 5-7</div>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px">
@@ -40,34 +41,34 @@ li{font-size:13.5px;color:#334155;line-height:1.6;margin-bottom:3px}
   </div>
 </div>
 
-<div class="sec">
-  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
-    <div><h2>Conditionals</h2><div class="ti">~20 min</div></div></div>
-  <div class="sb"><p>Q1: score=85, if>=90:"A" elif>=80:"B" → B. Show live on board. Have students predict before running. Q3: elif is the keyword — not elseif (Java), not then (pseudocode).</p></div>
+<div class="sec" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; margin-bottom:20px; overflow:hidden">
+  <div class="sh" style="display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid #f1f5f9"><div class="si" style="width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; background:#cffafe" width="36" height="36">📝</div>
+    <div><h2 style="font-size:15px; font-weight:700; color:#1e293b; margin:0">Conditionals</h2><div class="ti" style="font-size:11px; color:#94a3b8; margin-top:1px">~20 min</div></div></div>
+  <div class="sb" style="padding:20px"><p style="font-size:14px; color:#334155; line-height:1.7; margin-bottom:10px">Q1: score=85, if&gt;=90:"A" elif&gt;=80:"B" → B. Show live on board. Have students predict before running. Q3: elif is the keyword — not elseif (Java), not then (pseudocode).</p></div>
 </div>
-<div class="sec">
-  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
-    <div><h2>Loops</h2><div class="ti">~20 min</div></div></div>
-  <div class="sb"><p>Q2: total=0, for i in range(1,6): total+=i → 15. trace step by step. range(1,6)=[1,2,3,4,5]. Q5: break exits immediately. continue skips to next.</p></div>
+<div class="sec" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; margin-bottom:20px; overflow:hidden">
+  <div class="sh" style="display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid #f1f5f9"><div class="si" style="width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; background:#cffafe" width="36" height="36">📝</div>
+    <div><h2 style="font-size:15px; font-weight:700; color:#1e293b; margin:0">Loops</h2><div class="ti" style="font-size:11px; color:#94a3b8; margin-top:1px">~20 min</div></div></div>
+  <div class="sb" style="padding:20px"><p style="font-size:14px; color:#334155; line-height:1.7; margin-bottom:10px">Q2: total=0, for i in range(1,6): total+=i → 15. trace step by step. range(1,6)=[1,2,3,4,5]. Q5: break exits immediately. continue skips to next.</p></div>
 </div>
-<div class="sec">
-  <div class="sh"><div class="si" style="background:#cffafe">&#x1F4DD;</div>
-    <div><h2>Functions & Debugging</h2><div class="ti">~20 min</div></div></div>
-  <div class="sb"><p>Q4: compute_tax(100,0.07)=7.0 — return value is float. Q6: greet("Alice") → "Hello, Alice!". Debug First, Then Ask: read error → try fix → search → AI with full error.</p></div>
+<div class="sec" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; margin-bottom:20px; overflow:hidden">
+  <div class="sh" style="display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid #f1f5f9"><div class="si" style="width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; background:#cffafe" width="36" height="36">📝</div>
+    <div><h2 style="font-size:15px; font-weight:700; color:#1e293b; margin:0">Functions &amp; Debugging</h2><div class="ti" style="font-size:11px; color:#94a3b8; margin-top:1px">~20 min</div></div></div>
+  <div class="sb" style="padding:20px"><p style="font-size:14px; color:#334155; line-height:1.7; margin-bottom:10px">Q4: compute_tax(100,0.07)=7.0 — return value is float. Q6: greet("Alice") → "Hello, Alice!". Debug First, Then Ask: read error → try fix → search → AI with full error.</p></div>
 </div>
-<div class="sec">
-  <div class="sh"><div class="si" style="background:#fef9c3">&#x1F550;</div><div><h2>Suggested Class Schedule (75 min)</h2></div></div>
-  <div class="sb">
-    <table class="sched">
+<div class="sec" style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; margin-bottom:20px; overflow:hidden">
+  <div class="sh" style="display:flex; align-items:center; gap:12px; padding:16px 20px; border-bottom:1px solid #f1f5f9"><div class="si" style="width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:17px; flex-shrink:0; background:#fef9c3" width="36" height="36">🕐</div><div><h2 style="font-size:15px; font-weight:700; color:#1e293b; margin:0">Suggested Class Schedule (75 min)</h2></div></div>
+  <div class="sb" style="padding:20px">
+    <table class="sched" style="width:100%; border-collapse:collapse; font-size:13px" width="100%">
       <tbody>
-        <tr><td>0:00-0:05</td><td>Recap previous week, DataCamp check-in, set today's pace.</td></tr>
-        <tr><td>0:05-0:25</td><td>Conditionals: Q1: score=85, if>=90:"A" elif>=80:"B" → B. Show live on board. Have students pre...</td></tr>
-        <tr><td>0:25-0:50</td><td>Loops: Q2: total=0, for i in range(1,6): total+=i → 15. trace step by step. range(1,6)=...</td></tr>
-        <tr><td>0:50-1:10</td><td>Functions & Debugging: Q4: compute_tax(100,0.07)=7.0 — return value is float. Q6: greet("Alice") → "Hel...</td></tr>
-        <tr><td>1:10-1:15</td><td>Quiz preview, assignment intro, office hours reminder.</td></tr>
+        <tr><td style='padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; width:120px; font-family:"Courier New", monospace; font-size:12px; font-weight:600; color:#64748b; white-space:nowrap' valign="top" width="120">0:00-0:05</td><td style="padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top" valign="top">Recap previous week, DataCamp check-in, set today's pace.</td></tr>
+        <tr><td style='padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; width:120px; font-family:"Courier New", monospace; font-size:12px; font-weight:600; color:#64748b; white-space:nowrap' valign="top" width="120">0:05-0:25</td><td style="padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top" valign="top">Conditionals: Q1: score=85, if&gt;=90:"A" elif&gt;=80:"B" → B. Show live on board. Have students pre...</td></tr>
+        <tr><td style='padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; width:120px; font-family:"Courier New", monospace; font-size:12px; font-weight:600; color:#64748b; white-space:nowrap' valign="top" width="120">0:25-0:50</td><td style="padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top" valign="top">Loops: Q2: total=0, for i in range(1,6): total+=i → 15. trace step by step. range(1,6)=...</td></tr>
+        <tr><td style='padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; width:120px; font-family:"Courier New", monospace; font-size:12px; font-weight:600; color:#64748b; white-space:nowrap' valign="top" width="120">0:50-1:10</td><td style="padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top" valign="top">Functions &amp; Debugging: Q4: compute_tax(100,0.07)=7.0 — return value is float. Q6: greet("Alice") → "Hel...</td></tr>
+        <tr><td style='padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top; width:120px; font-family:"Courier New", monospace; font-size:12px; font-weight:600; color:#64748b; white-space:nowrap' valign="top" width="120">1:10-1:15</td><td style="padding:9px 14px; border-bottom:1px solid #f1f5f9; vertical-align:top" valign="top">Quiz preview, assignment intro, office hours reminder.</td></tr>
       </tbody>
     </table>
   </div>
 </div>
-<div class="pf">ISM2411 6-Week Accelerated Week 2 Lecture Notes USF Muma College of Business</div>
+<div class="pf" style="text-align:center; font-size:11px; color:#94a3b8; margin-top:40px; padding-top:20px; border-top:1px solid #e2e8f0" align="center">ISM2411 6-Week Accelerated Week 2 Lecture Notes USF Muma College of Business</div>
 </div></body></html>

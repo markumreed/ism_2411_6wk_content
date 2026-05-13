@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import premailer; print\\('premailer ok'\\)\")",
+      "Bash(python3 -c \"import css_inline; print\\('css_inline ok'\\)\")",
+      "Bash(python3 -c \"import bs4; print\\('bs4 ok'\\)\")",
+      "Bash(python3 -c \"import cssutils; print\\('cssutils ok'\\)\")",
+      "Bash(pip3 list *)",
+      "Bash(pip3 install *)"
+    ]
+  }
+}
